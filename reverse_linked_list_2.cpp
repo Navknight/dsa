@@ -11,7 +11,7 @@ struct ListNode
 
 ListNode *reverseBetween(ListNode *head, int left, int right)
 {
-    if(head == NULL || head->next == NULL || left == high)
+    if(head == NULL || head->next == NULL || left == right)
         return head;
     else{
         
