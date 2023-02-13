@@ -10,7 +10,7 @@ struct Node
     Node *right;
     Node *next;
     Node(int x) : val(x), left(NULL), right(NULL), next(NULL) {}
-}
+};
 
 Node* connect(Node *root)
 {
@@ -63,7 +63,7 @@ int main()
     root->right->right->left = new Node(12);
     root->right->right->right = new Node(13);
 
-    Node *result = connect(root);
+    struct Node* result = connect(root);
     
     cout << result->val << endl;
     cout << result->left->val << endl;
