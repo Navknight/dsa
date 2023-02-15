@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -14,35 +14,21 @@ struct Node
 
 Node* connect(Node *root)
 {
-    vector<Node *> current;
-    if (root)
-    {
-        root->next = NULL;
-        current.push_back(root);
-    }
-    else
+    if(root == NULL) return root;
+
+        Node* lnode = root;
+        while(lnode->left != NULL){
+            Node* head = lnode;
+            while(head != NULL){
+                head->left->next = head->right;
+                if(head->next != NULL){
+                    head->right->next = head->next->left;
+                }
+                head = head->next;
+            }   
+            lnode = lnode->left;
+        }   
         return root;
-    while (!current.empty())
-    {
-        int n = current.size() - 1;
-        if (current[n]->right && current[n]->left)
-        {
-            current[n]->left->next = current[n]->right;
-            if (n > 0)
-                current[n]->right->next = current[n - 1]->left;
-            else
-                current[n]->right->next = NULL;
-            Node *curr = current[n];
-            current.pop_back();
-            current.push_back(curr->right);
-            current.push_back(curr->left);
-        }
-        else
-        {
-            current.pop_back();
-        }
-    }
-    return root;
 }
 
 int main()
