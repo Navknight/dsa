@@ -32,3 +32,4 @@
 *.app
 .vscode/settings.json
 .vscode/tasks.json
+rotate_image
