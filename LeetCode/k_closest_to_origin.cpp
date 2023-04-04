@@ -2,31 +2,23 @@
 
 using namespace std;
 
-float distance(vector<int> coord)
-{
-    return sqrt(pow(coord[0], 2) + pow(coord[1], 2));
-}
-
 vector<vector<int>> kClosest(vector<vector<int>> &points, int k)
 {
     vector<vector<int>> ans;
-    vector<float> dist;
-    for (auto c : points)
-        dist.push_back(distance(c));
-    while (k--)
+    priority_queue < pair<int, pair<int, int>>> q;
+    for (int i = 0; i < points.size(); i++)
     {
-        float min = INT32_MAX;
-        int ind = 0;
-        for (int i = 0; i < dist.size(); i++)
-        {
-            if (dist[i] < min)
-            {
-                min = dist[i];
-                ind = i;
-            }
-        }
-        ans.push_back(points[ind]);
-        dist[ind] = INT32_MAX;
+        q.push({pow(points[i][0], 2) + pow(points[i][1], 2), {points[i][0], points[i][1]}});
+        if(q.size()>k)
+            q.pop();
+    }
+    while(!q.empty()){
+        vector<int> row;
+        row.push_back(q.top().second.first);
+        row.push_back(q.top().second.second);
+        q.pop();
+        ans.push_back(row);
+        row.clear();
     }
     return ans;
 }
