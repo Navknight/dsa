@@ -21,7 +21,7 @@ int nextGreaterElement(int n)
 
 int main()
 {
-    int n = 21;
+    int n = 23102431;
     cout << nextGreaterElement(n) << endl;
     return 0;
 }
