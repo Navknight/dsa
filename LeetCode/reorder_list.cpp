@@ -40,6 +40,31 @@ void reorderList(ListNode *head)
     }
 }
 
+// void reorderList(ListNode *head) {
+//     if (!head || !head->next) return;
+//     ListNode *slow = head, *fast = head;
+//     while (fast && fast->next) {
+//         slow = slow->next;
+//         fast = fast->next->next;
+//     }
+//     ListNode *prev = nullptr, *curr = slow, *tmp;
+//     while (curr) {
+//         tmp = curr->next;
+//         curr->next = prev;
+//         prev = curr;
+//         curr = tmp;
+//     }
+//     ListNode *first = head, *second = prev;
+//     while (second->next) {
+//         tmp = first->next;
+//         first->next = second;
+//         first = tmp;
+//         tmp = second->next;
+//         second->next = first;
+//         second = tmp;
+//     }
+// }
+
 int main()
 {
     ListNode *head = new ListNode(1);
