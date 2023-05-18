@@ -27,7 +27,7 @@ ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
     }
 
     int carry = 0;
-    while(!s1.empty() || !s2.empty()){
+    while((!s1.empty() || !s2.empty()) && carry != 0){
         int x = (s1.empty())?0:s1.top()->val;
         if(!s1.empty()) s1.pop();
         int y = (s2.empty())?0:s2.top()->val;
