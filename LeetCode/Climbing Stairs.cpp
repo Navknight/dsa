@@ -1,26 +1,24 @@
-class Solution
+#include <bits/stdc++.h>
+
+using namespace std;
+
+unordered_map<int, int> a = {{1, 1}, {2, 2}};
+
+int climbStairs(int n)
 {
-public:
-    map<int, int> a{{1, 1}, {2, 2}};
-    int climbStairs(int n)
+    if (a.find(n) != a.end())
+        return a[n];
+    else
     {
-        if (n == 1)
-            return a[1];
-        else if (n == 2)
-            return a[2];
-        else
-        {
-            int value = a[n];
-            if (value == NULL)
-            {
-                value = climbStairs(n - 1) + climbStairs(n - 2);
-                a[n] = value;
-                return value;
-            }
-            else
-            {
-                return value;
-            }
-        }
+        a[n] = climbStairs(n - 1) + climbStairs(n - 2);
+        return a[n];
     }
-};
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    cout << climbStairs(n) << endl;
+    return 0;
+}
