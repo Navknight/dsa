@@ -2,16 +2,25 @@
 
 using namespace std;
 
+unordered_map<int, int> a;
+
+int mincost(vector<int> &cost, int i)
+{
+    if (i < 0)
+        return 0;
+    
+    if(a.find(i) != a.end())
+        return a[i];
+    
+    int cost1 = cost[i] + mincost(cost, i - 1);
+    int cost2 = cost[i] + mincost(cost, i - 2);
+    a[i] = min(cost1, cost2);
+    return a[i];
+}
+
 int minCostClimbingStairs(vector<int> &cost)
 {
-    int n = cost.size() - 1;
-    cost.push_back(0);
-    cost.push_back(0);
-    for (int i = n; i >= 0; i--)
-    {
-        cost[i] += min(cost[i + 1], cost[i + 2]);
-    }
-    return min(cost[0], cost[1]);
+    return min(mincost(cost, cost.size() - 1), mincost(cost, cost.size() - 2));
 }
 
 int main()
