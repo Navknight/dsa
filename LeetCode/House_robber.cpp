@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -28,4 +29,20 @@ int main()
     vector<int> nums = {2,7,9,3,1};
     cout << rob(nums) << endl;
     return 0;
+=======
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int rob(vector<int> &nums)
+{
+
+}
+
+int main()
+{
+    vector<int> nums = {1, 2, 3, 1};
+    cout << rob(nums) << endl;
+    return 0;
+>>>>>>> 3a3501ec2f6751e05c87576db001a34de62bd84a
 }
