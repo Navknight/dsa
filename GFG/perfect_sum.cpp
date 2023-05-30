@@ -6,7 +6,7 @@ class Solution
 public:
     int perfectSum(int arr[], int n, int sum)
     {
-        int MOD = 1000000007;
+        int MOD = 1e9 + 7;
         vector<vector<int>> t(n + 1, vector<int>(sum + 1, 0));
 
         for (int i = 0; i < n + 1; i++)
