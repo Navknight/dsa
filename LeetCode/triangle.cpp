@@ -4,14 +4,15 @@ using namespace std;
 
 int minimumTotal(vector<vector<int>> &triangle)
 {
-    vector<int> dp(triangle.back());
-    int n = triangle.size();
-    for(int i = n-2; i >= 0; i--){
-        for(int j = 0; j <= i; j++){
-            dp[j] = triangle[i][j] + min(dp[j], dp[j+1]);
+    vector<int> t(triangle.back());
+    for (int i = triangle.size() - 2; i >= 0; i--)
+    {
+        for (int j = 0; j<= triangle[i].size() - 1; j++)
+        {
+            t[j] = triangle[i][j] + min(t[j], t[j+1]);
         }
     }
-    return dp[0];
+    return t[0];
 }
 
 int main()
