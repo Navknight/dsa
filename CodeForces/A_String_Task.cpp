@@ -11,32 +11,12 @@ int main()
     string out = "";
     for (int i = 0; i < count; i++)
     {
-        if (in[i] == 'a' || in[i] == 'e' || in[i] == 'i' || in[i] == 'o' || in[i] == 'u' || in[i] == 'A' || in[i] == 'E' || in[i] == 'I' || in[i] == 'O' || in[i] == 'U')
+        in[i] = tolower(in[i]);
+        if (in[i] == 'a' || in[i] == 'e' || in[i] == 'i' || in[i] == 'o' || in[i] == 'u')
             continue;
-
-        if (in[i] >= 'A' && in[i] <= 'Z')
-        {
-            if (out.back() == '.')
-            {
-                out.push_back(in[i] - 'A' + 'a');
-            }
-            else
-            {
-                out.push_back('.');
-                out.push_back(in[i] - 'A' + 'a');
-            }
-        }
-        else
-        {
-            if (out.back() == '.')
-            {
-                out.push_back(in[i]);
-            }
-            else
-            {
-                out.push_back('.');
-                out.push_back(in[i]);
-            }
+        else{
+            out += '.';
+            out += in[i];
         }
     }
 
