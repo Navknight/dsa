@@ -16,6 +16,9 @@ int lcs(int n, int m, string s1, string s2)
     }
 }
 
+//Memorised Solution
+
+
 int main()
 {
     int t, n, m;
