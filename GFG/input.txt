@@ -1,4 +1,3 @@
-5
-3
-abcde
-ace
+6 2
+aggtab
+gg
