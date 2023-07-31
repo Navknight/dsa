@@ -51,7 +51,7 @@ string scs(int n, int m, string a, string b)
         }
         else
         {
-            if (t[i - 1][j] < t[i][j - 1])
+            if (t[i - 1][j] > t[i][j - 1])
             {
                 ans = a[i - 1] + ans;
                 i--;

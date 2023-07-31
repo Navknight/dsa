@@ -10,45 +10,59 @@ int main()
 
     string s;
     cin >> s;
-    int l = s.size();
-
-    string sr = "";
-    for (int i = 0; i < l; i++)
-        sr = s[i] + sr;
-
-    cout << sr << endl;
-
-    vector<vector<int>> t(l + 1, vector<int>(l + 1));
-    pair<int, int> ind = {0, 0};
-    int max = 0;
-    for (int i = 0; i < l + 1; i++)
-    {
-        for (int j = 0; j < l + 1; j++)
-        {
-            if (i == 0 || j == 0)
-                t[i][j] = 0;
-            else
-            {
-                if (s[i - 1] == sr[j - 1])
-                {
-                    t[i][j] = 1 + t[i - 1][j - 1];
-                    if (t[i][j] > max)
-                    {
-                        max = t[i][j];
-                        ind = {i, j};
-                    }
-                }
-                else
-                    t[i][j] = 0;
-            }
-        }
-    }
+    int n = s.size();
 
     string ans = "";
-    while (t[ind.first][ind.second] != 0)
+    int max = 0;
+
+    for (int i = 1; i < n; i++)
     {
-        ans += s[--ind.first];
-        ind.second--;
+        int l = i - 1;
+        int r = i + 1;
+
+        while (l >= 0 && r < n)
+        {
+            if (s[l] == s[r])
+            {
+                if (r - l + 1 > max)
+                {
+                    ans = s.substr(l, r - l + 1);
+                    max = r - l + 1;
+                    l--;
+                    r++;
+                }
+                else
+                {
+                    l--;
+                    r++;
+                }
+            }
+            else
+                break;
+        }
+
+        l = i - 1;
+        r = i;
+        while (l >= 0 && r < n)
+        {
+            if (s[l] == s[r])
+            {
+                if (r - l + 1 > max)
+                {
+                    ans = s.substr(l, r - l + 1);
+                    max = r - l + 1;
+                    l--;
+                    r++;
+                }
+                else
+                {
+                    l--;
+                    r++;
+                }
+            }
+            else
+                break;
+        }
     }
     cout << ans << endl;
     return 0;
