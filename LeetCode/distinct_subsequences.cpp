@@ -4,25 +4,22 @@ using namespace std;
 
 int numDistinct(string s, string t)
 {
-    int m = s.size();
-    int n = t.size();
-    vector<unsigned long long int> dp(n + 1);
-
-    dp[0] = 1;
-
-    for (int i = 1; i <= m; i++)
+    int m = s.size(), n = t.size();
+    vector<vector<long long int>> dp(m + 1, vector<long long int>(n + 1));
+    for (int i = 0; i < m + 1; i++)
+        dp[i][0] = 1;
+    for (int i = 1; i < m + 1; i++)
     {
-        unsigned long long int prev = 1;
-        for (int j = 1; j <= n; j++)
+        for (int j = 1; j < n + 1; j++)
         {
-            long long int temp = dp[j];
             if (s[i - 1] == t[j - 1])
-                dp[j] += prev;
-            prev = temp;
+                dp[i][j] = ((dp[i - 1][j - 1] + dp[i - 1][j] > 2147483647) ? 0 : dp[i - 1][j - 1] + dp[i - 1][j]);
+            else
+                dp[i][j] = dp[i - 1][j];
         }
     }
 
-    return dp[n];
+    return dp[m][n];
 }
 
 int main()
