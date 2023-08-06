@@ -21,8 +21,6 @@ bool lcs(string s, string t)
         }
     }
 
-    
-
     return t.size() == dp[s.size()][t.size()];
 }
 
@@ -30,17 +28,27 @@ int numDistinct(string s, string t, int sum)
 {
     if (s.size() == t.size())
         return 1;
-    for (int i = 0; i < s.size(); i++)
+    int j = 0;
+    while (j < s.size())
     {
-        char c = s[i];
+        for (int i = 0; i < t.size(); i++)
+        {
+            if (s[j] == t[i])
+            {
+                char c = s[j];
 
-        s.erase(s.begin() + i);
+                s.erase(s.begin() + j);
 
-        numDistinct(s, t, sum);
+                numDistinct(s, t, sum);
 
-        sum = ((lcs(s, t)) ? sum + 1 : sum);
+                sum = ((lcs(s, t)) ? sum + 1 : sum);
 
-        s.insert(s.begin() + i, c);
+                s.insert(s.begin() + j, c);
+
+                j++;
+            }
+        }
+        j++;
     }
     return sum;
 }
