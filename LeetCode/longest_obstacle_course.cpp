@@ -7,37 +7,29 @@ int binarySearch(vector<int> &t, int start, int end, int val)
     if (start >= end)
         return end;
 
-    int mid = start + (end - start) / 2;  // To prevent integer overflow
+    int mid = start + (end - start) / 2; // To prevent integer overflow
 
-    if (val == t[mid])
-        return mid;
-    else if (val > t[mid])
+    if (val >= t[mid])
         return binarySearch(t, mid + 1, end, val);
     else
-        return binarySearch(t, start, mid - 1, val);
+        return binarySearch(t, start, mid, val);
 }
-
 
 vector<int> longestObstacleCourseAtEachPosition(vector<int> &obstacles)
 {
     int n = obstacles.size();
-    vector<int> ans(n, 1);
     vector<int> t;
+    vector<int> ans(n);
 
     for (int i = 0; i < n; i++)
     {
-        if (t.size() == 0 || t[t.size() - 1] <= obstacles[i])
-        {
+        int it = binarySearch(t, 0, t.size(), obstacles[i]);
+        if (it == t.size())
             t.push_back(obstacles[i]);
-            int it = t.size();
-            ans[i] = it;
-        }
         else
-        {
-            int it = binarySearch(t, 0, t.size() - 1, obstacles[i]);
-            t.insert(t.begin() + it++, obstacles[i]);
-            ans[i] = it + 1;
-        }
+            t[it] = obstacles[i];
+
+        ans[i] = it + 1;
     }
 
     return ans;
