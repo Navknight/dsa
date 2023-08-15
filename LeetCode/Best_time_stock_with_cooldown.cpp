@@ -28,17 +28,18 @@ using namespace std;
 int maxProfit(vector<int> &prices)
 {
     int n = prices.size();
-    vector<vector<int>> t(n+1, vector<int> (2));
+    vector<vector<int>> t(n + 2, vector<int>(2, 0));
 
-    //0 is for holding stock
-    //1 is for buying
+    // 0 is when we buy
+    // 1 is when we sell
 
-    t[0][0] = 0;
-    t[0][1] = -prices[0];
-
-    for(int i  = 1; i < n+1; i++){
-        
+    for (int i = n - 1; i >= 0; i--)
+    {
+        t[i][0] = max(-prices[i] + t[i + 1][1], 0 + t[i + 1][0]);
+        t[i][1] = max(prices[i] + t[i + 2][0], 0 + t[i + 1][1]);
     }
+
+    return t[0][0];
 }
 
 int main()
