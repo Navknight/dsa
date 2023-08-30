@@ -2,34 +2,45 @@
 
 using namespace std;
 
-bool isPalindrome(string str, int start, int end)
+bool isPalindrome(string str)
 {
-    for (int i = start; i < (end - start + 1) / 2; i++)
-        if (str[i] != str[end - i])
+    int n = str.size();
+    for (int i = 0; i < n / 2; i++)
+    {
+        if (str[i] != str[n - i - 1])
             return false;
+    }
+
     return true;
 }
 
-int help(string str, int i, int j, vector<vector<int>> &t)
+int pal(int i, int j, string str, vector<vector<int>> &t)
 {
-    if (i >= j || isPalindrome(str, i, j))
+    if (i >= j)
+        return t[i][j] = 0;
+    if (isPalindrome(str.substr(i, j - i + 1)))
         return t[i][j] = 0;
     if (t[i][j] != -1)
         return t[i][j];
-    int mini = INT32_MAX;
-    for (int k = i; k < j; k++)
+    else
     {
-        mini = min(help(str, i, k, t) + help(str, k + 1, j, t) + 1, mini);
+        int mini = INT32_MAX;
+        for (int k = i; k < j; k++)
+        {
+            int left = (t[i][k] != -1) ? t[i][k] : pal(i, k, str, t);
+            int right = (t[k + 1][j] != -1) ? t[k + 1][j] : pal(k + 1, j, str, t);
+            int temp = 1 + right + left;
+            mini = min(mini, temp);
+        }
+        return t[i][j] = mini;
     }
-
-    return t[i][j] = mini;
 }
 
 int palindromicPartition(string str)
 {
     int n = str.size();
     vector<vector<int>> t(n + 1, vector<int>(n + 1, -1));
-    return help(str, 0, str.size() - 1, t);
+    return pal(0, n - 1, str, t);
 }
 
 int main()
