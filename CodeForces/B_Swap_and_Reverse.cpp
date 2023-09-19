@@ -12,7 +12,7 @@ int main()
         cin >> n >> k;
         string s;
         cin >> s;
-        
+
         if (k % 2 == 0)
         {
             sort(s.begin(), s.end());
