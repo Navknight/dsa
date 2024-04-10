@@ -19,8 +19,8 @@ vector<int> shortestAlternatingPaths(int n, vector<vector<int>> &redEdges, vecto
 
     for (int i = 0; i < 2; i++)
     {
-        vector<vector<bool>> vis(n, vector<bool>(n, 0));
-        vis[i][0] = 1;
+        vector<vector<bool>> vis(n, vector<bool>(2, 0));
+        vis[0][i] = 1;
         priority_queue<pair<int, pair<int, bool>>, vector<pair<int, pair<int, bool>>>, greater<pair<int, pair<int, bool>>>> pq;
         pq.push({0, {0, i}});
 
@@ -39,9 +39,9 @@ vector<int> shortestAlternatingPaths(int n, vector<vector<int>> &redEdges, vecto
             {
                 for (auto v : edges[node])
                 {
-                    if (!vis[!last][v])
+                    if (!vis[v][!last])
                     {
-                        vis[!last][v] = true;
+                        vis[v][!last] = true;
                         dis[v] = min(dis[v], 1 + d);
                         pq.push({1 + d, {v, !last}});
                     }
