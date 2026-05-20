@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "b1149127773a564f",
+    "type": "split",
+    "children": [
+      {
+        "id": "739b3926be14f8c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bf841eed90a56c5f",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "notes/Problems/Hash Maps/3Sum.md",
+                "bFile": "notes/Problems/Hash Maps/3Sum.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: 3Sum  (Working Tree)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c514673caeb5c8ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "e3b43e62bb916a12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69bec3c9bd76d04f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cc51c2acccf311fc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#DFS",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b0af8e02825e9666",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7c9f21e0fc2e5aaa",
+    "type": "split",
+    "children": [
+      {
+        "id": "a6ccd48238655240",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "985a9efdaac09d64",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Leetcode/Frequency of the Most Frequent Element.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Frequency of the Most Frequent Element"
+            }
+          },
+          {
+            "id": "0d44ff66f67d0bee",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Leetcode/Frequency of the Most Frequent Element.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Frequency of the Most Frequent Element"
+            }
+          },
+          {
+            "id": "013a0b0b6ca0dbff",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6d758ea81abace28",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Leetcode/Frequency of the Most Frequent Element.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Frequency of the Most Frequent Element"
+            }
+          },
+          {
+            "id": "4b58e404bbe3cd7f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 561.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "bf841eed90a56c5f",
+  "lastOpenFiles": [
+    "Problems/Sliding Window/Permutation In String.md",
+    "Problems/Two Pointers/Trapping Rain Water.md",
+    "My Sheet.md",
+    "Problems/Dynamic Programming/Knapsack/Number Of Coins.md",
+    "Problems/Arrays/Two Sum II - Input Array Is Sorted.md",
+    "Problems/Arrays/Valid Sudoku.md",
+    "Problems/Arrays/Valid Sudoku.md.tmp.12432.c068e2afa213",
+    "Temp/Problem.md.tmp.12432.08b730607e71",
+    "Temp/Problem.md",
+    "Problems/Graphs/Word Ladder II.md",
+    "Problems/Stack/Next Greater Element II.md",
+    "Problems/Stack/Daily Temperatures.md",
+    "Problems/Graphs/Number Of Islands.md",
+    "Problems/Graphs/Detect cycle in Undirected graph.md",
+    "Problems/Graphs/Detect Cycle in 2D Grid.md",
+    "Problems/Graphs/Minimum Spanning Tree.md",
+    "Problems/Trees/Linked List in Binary Tree.md",
+    "Problems/Linked Lists/Copy List With Random Pointer.md",
+    "Problems/Stack/Add Two Numbers II.md",
+    "Problems/Sliding Window/Subarray Product Less Than K.md",
+    "Problems/Stack/Longest Valid Parenthesis.md",
+    "Problems/Dynamic Programming/Unique Paths.md",
+    "Problems/Dynamic Programming/Knapsack/Unbounded Knapsack.md",
+    "Problems/Dynamic Programming/LCS/Printing Longest Common Subsequence.md",
+    "Problems/Dynamic Programming/LCS/Minimum Number of Deletions and Insertions.md",
+    "Problems/Dynamic Programming/LCS/Minimum Number of deletions in a String to make is a palindrome.md",
+    "Problems/Dynamic Programming/Minimum ASCII Delete Sum for Two Strings.md",
+    "Problems/Dynamic Programming/Min Cost Climbing Stairs.md",
+    "scripts/fix_shadows.py",
+    "scripts/create_references.py",
+    "scripts/fix_dynamic.py",
+    "Leetcode",
+    "Graph-Basics",
+    "GeeksForGeeks",
+    "DP Basics/Unbounded Knapsack",
+    "DP Basics/Matrix Chain Multiplication",
+    "Photos/sparse1.drawio.png",
+    "Photos/Pasted image 20250130130355.png"
+  ]
+}
