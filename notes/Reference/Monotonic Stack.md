@@ -50,7 +50,7 @@ vector<int> prevSmaller(vector<int>& arr) {
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Monotonic Stack")
 sort difficulty asc, file.name asc
 ```

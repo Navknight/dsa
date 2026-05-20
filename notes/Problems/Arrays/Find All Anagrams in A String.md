@@ -4,9 +4,9 @@ topics:
   - Sliding Window
 source: Leetcode
 star: false
-code: ../../../LeetCode/find_all_anagrams_in_a_string.cpp
+code: LeetCode/find_all_anagrams_in_a_string.cpp
 ---
-
+[[LeetCode/find_all_anagrams_in_a_string.cpp]]
 [[Sliding Window]]
 
  [Find All Anagrams in A String]([Find All Anagrams in a String - LeetCode](https://leetcode.com/problems/find-all-anagrams-in-a-string/?envType=study-plan&id=programming-skills-ii)) # 

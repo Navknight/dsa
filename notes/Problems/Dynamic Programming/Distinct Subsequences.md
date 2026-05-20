@@ -4,9 +4,9 @@ topics: ["Dynamic Programming"]
 source: Leetcode
 star: true
 link: "https://leetcode.com/problems/distinct-subsequences/description/?envType=study-plan-v2&envId=dynamic-programming"
-code: ../../../LeetCode/distinct_subsequences.cpp
+code: LeetCode/distinct_subsequences.cpp
 ---
-
+[[LeetCode/distinct_subsequences.cpp]]
 [[Dynamic Programming]]
 
 # Problem

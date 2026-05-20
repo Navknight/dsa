@@ -4,9 +4,9 @@ topics: ["Math"]
 source: CodeForces
 star: false
 link: "https://codeforces.com/problemset/problem/122/A"
-code: ../../../CodeForces/A_Lucky_Division.cpp
+code: CodeForces/A_Lucky_Division.cpp
 ---
-
+[[CodeForces/A_Lucky_Division.cpp]]
 [[Math]]
 
 ```cpp

@@ -63,20 +63,34 @@ def extract_frontmatter(text: str) -> tuple[dict, str]:
             fm[k.strip()] = v.strip()
     return fm, body
 
-def inject_code_field(text: str, code_rel: str) -> str:
-    """Insert or replace 'code:' field in YAML frontmatter."""
-    if not text.startswith("---"):
-        return f"---\ncode: {code_rel}\n---\n{text}"
-    end = text.find("\n---", 3)
-    if end == -1:
-        return text
-    fm_block = text[3:end]
-    # Replace existing code: field or append
-    if re.search(r"^code:", fm_block, re.MULTILINE):
-        fm_block = re.sub(r"^code:.*$", f"code: {code_rel}", fm_block, flags=re.MULTILINE)
-    else:
-        fm_block = fm_block.rstrip() + f"\ncode: {code_rel}"
-    return "---" + fm_block + text[end:]
+def inject_code_link(text: str, vault_rel: str) -> str:
+    """
+    Add code: to frontmatter (for dataview) and a clickable wikilink to body.
+    vault_rel: path relative to vault root, e.g. 'CodeForces/A_Beautiful_Matrix.cpp'
+    """
+    wikilink = f"[[{vault_rel}]]"
+
+    # Inject into frontmatter
+    if text.startswith("---"):
+        end = text.find("\n---", 3)
+        if end != -1:
+            fm_block = text[3:end]
+            if re.search(r"^code:", fm_block, re.MULTILINE):
+                fm_block = re.sub(r"^code:.*$", f"code: {vault_rel}", fm_block, flags=re.MULTILINE)
+            else:
+                fm_block = fm_block.rstrip() + f"\ncode: {vault_rel}"
+            text = "---" + fm_block + text[end:]
+
+    # Inject clickable wikilink at top of body (after frontmatter block)
+    if text.startswith("---"):
+        end = text.find("\n---", 3)
+        if end != -1:
+            after_fm = text[end + 4:]
+            # Remove old wikilink if re-running
+            after_fm = re.sub(r"^\[\[.*?\.cpp\]\]\n?", "", after_fm)
+            text = text[:end + 4] + f"\n{wikilink}\n" + after_fm.lstrip("\n")
+
+    return text
 
 def main():
     code_index = build_code_index()
@@ -106,8 +120,9 @@ def main():
                     code_path = src_idx[norm_note]
 
             if code_path:
-                rel = os.path.relpath(code_path, dest_file.parent).replace("\\", "/")
-                text = inject_code_field(text, rel)
+                # Path relative to vault root (Github/dsa/)
+                vault_rel = code_path.relative_to(REPO_ROOT).as_posix()
+                text = inject_code_link(text, vault_rel)
                 matched += 1
             else:
                 if source in SOURCE_TO_DIR:
@@ -115,7 +130,7 @@ def main():
 
             dest_file.write_text(text, encoding="utf-8")
 
-    # Copy non-Problems content (Topics, Reference, etc.) verbatim
+    # Copy non-Problems content (Topics, Reference, etc.)
     for item in NOTES_SRC.iterdir():
         if item.name == "Problems":
             continue
@@ -124,6 +139,19 @@ def main():
             shutil.copytree(item, dest, dirs_exist_ok=True)
         else:
             shutil.copy2(item, dest)
+
+    # Fix Dataview paths: vault root is repo root, not notes/
+    fix_dirs = [NOTES_DEST / "Topics", NOTES_DEST / "Reference"]
+    fix_files = [NOTES_DEST / "My Sheet.md"]
+    for d in fix_dirs:
+        fix_files.extend(d.glob("*.md"))
+    for md in fix_files:
+        if not md.exists():
+            continue
+        text = md.read_text(encoding="utf-8")
+        fixed = text.replace('from "Problems"', 'from "notes/Problems"')
+        if fixed != text:
+            md.write_text(fixed, encoding="utf-8")
 
     print(f"Matched:   {matched}")
     print(f"Unmatched: {len(unmatched)}")

@@ -11,7 +11,7 @@ Fixed or variable-size window over sequence
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Sliding Window")
 sort difficulty asc, file.name asc
 ```

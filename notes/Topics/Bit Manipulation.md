@@ -11,7 +11,7 @@ Bitwise ops, XOR tricks
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Bit Manipulation")
 sort difficulty asc, file.name asc
 ```

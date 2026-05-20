@@ -3,9 +3,9 @@ difficulty: Medium
 topics: []
 source: Leetcode
 star: false
-code: ../../../LeetCode/validate_binary_search_tree.cpp
+code: LeetCode/validate_binary_search_tree.cpp
 ---
-
+[[LeetCode/validate_binary_search_tree.cpp]]
 ## Recursive
 Recursive approach with tightening bounds as we traverse the tree. 
 The left child will be smaller than the root but larger than the last node where we took a right child. The right child will be smaller than the last node where we took a left child and smaller than the root.

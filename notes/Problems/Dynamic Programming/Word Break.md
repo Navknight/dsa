@@ -4,9 +4,9 @@ topics: ["Dynamic Programming", "Recursion", "BFS"]
 source: Leetcode
 star: false
 link: "https://leetcode.com/problems/word-break/?envType=study-plan-v2&envId=dynamic-programming"
-code: ../../../LeetCode/word_break.cpp
+code: LeetCode/word_break.cpp
 ---
-
+[[LeetCode/word_break.cpp]]
 [[Dynamic Programming]] [[Recursion]] [[BFS]]
 
 # Problem

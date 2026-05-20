@@ -3,9 +3,9 @@ difficulty: Easy
 topics: ["Dynamic Programming"]
 source: Leetcode
 star: false
-code: ../../../LeetCode/min_cost_climbing_stairs.cpp
+code: LeetCode/min_cost_climbing_stairs.cpp
 ---
-
+[[LeetCode/min_cost_climbing_stairs.cpp]]
 [[Dynamic Programming]]
 
 [Min Cost Climbing Stairs - LeetCode](https://leetcode.com/problems/min-cost-climbing-stairs/?envType=study-plan-v2&id=dynamic-programming)

@@ -3,9 +3,9 @@ difficulty: Medium
 topics: ["Linked Lists", "Stack", "Two Pointers"]
 source: Leetcode
 star: false
-code: ../../../LeetCode/reorder_list.cpp
+code: LeetCode/reorder_list.cpp
 ---
-
+[[LeetCode/reorder_list.cpp]]
 [[Linked Lists]] [[Stack]] [[Two Pointers]]
 
 [Reorder List]([Reorder List - LeetCode](https://leetcode.com/problems/reorder-list/submissions/931432638/?envType=study-plan&id=programming-skills-ii)) 

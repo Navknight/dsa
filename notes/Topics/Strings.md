@@ -11,7 +11,7 @@ String manipulation, palindromes, pattern matching
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Strings")
 sort difficulty asc, file.name asc
 ```

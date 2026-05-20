@@ -4,9 +4,9 @@ topics: ["Matrix", "Recursion", "Dynamic Programming"]
 source: Leetcode
 star: false
 link: "https://leetcode.com/problems/unique-paths/?envType=study-plan-v2&envId=dynamic-programming"
-code: ../../../LeetCode/unique_paths.cpp
+code: LeetCode/unique_paths.cpp
 ---
-
+[[LeetCode/unique_paths.cpp]]
 [[Matrix]] [[Recursion]] [[Dynamic Programming]]
 ## Backtracking 
 - The first solution is to use the usual backtracking logic used to find the number of combinations of given numbers. Assume each downward move to be represented by a 0 and each rightward move to be represented by 1. Then we can represent the movement of the bot by a string of 1's and 0's

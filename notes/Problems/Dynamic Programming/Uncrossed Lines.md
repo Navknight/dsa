@@ -4,9 +4,9 @@ topics: ["Dynamic Programming"]
 source: Leetcode
 star: false
 link: "https://leetcode.com/problems/uncrossed-lines"
-code: ../../../LeetCode/uncrossed_lines.cpp
+code: LeetCode/uncrossed_lines.cpp
 ---
-
+[[LeetCode/uncrossed_lines.cpp]]
 [[Dynamic Programming]]
 
 # Problem

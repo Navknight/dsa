@@ -3,8 +3,9 @@ difficulty: Medium
 topics: ["Binary Search", "DFS", "Trees", "BFS", "Linked Lists"]
 source: Leetcode
 star: false
-code: ../../../LeetCode/Linked_list_in_binary_tree.cpp
+code: LeetCode/Linked_list_in_binary_tree.cpp
 ---
+[[LeetCode/Linked_list_in_binary_tree.cpp]]
 [[Binary Search]] [[DFS]] [[Trees]] [[BFS]] [[Linked Lists]]
 
  [ List in  ]([ List in   - LeetCode](https://leetcode.com/problems/linked-list-in-binary-tree/submissions/931286310/?envType=study-plan&id=programming-skills-ii))

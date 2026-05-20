@@ -4,9 +4,9 @@ topics: ["Arrays"]
 source: Leetcode
 star: true
 link: "https://leetcode.com/problems/rotate-array/description/"
-code: ../../../LeetCode/rotate_array.cpp
+code: LeetCode/rotate_array.cpp
 ---
-
+[[LeetCode/rotate_array.cpp]]
 [[Arrays]]
 
 # Brute Force

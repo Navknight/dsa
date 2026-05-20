@@ -61,7 +61,7 @@ struct Trie {
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Tries")
 sort difficulty asc, file.name asc
 ```

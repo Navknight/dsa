@@ -34,7 +34,7 @@ int dy[] = {1, 0, -1, 0};
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Simulation")
 sort difficulty asc, file.name asc
 ```

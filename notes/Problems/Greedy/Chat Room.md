@@ -4,8 +4,9 @@ topics: ["Greedy", "Strings"]
 source: CodeForces
 star: false
 link: "https://codeforces.com/problemset/problem/58/A"
-code: ../../../CodeForces/A_Chat_room.cpp
+code: CodeForces/A_Chat_room.cpp
 ---
+[[CodeForces/A_Chat_room.cpp]]
 [[Greedy]] [[Strings]]
 
 ```cpp

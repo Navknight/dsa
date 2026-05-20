@@ -45,7 +45,7 @@ void dfs_iter(int start, vector<vector<int>>& adj) {
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "DFS")
 sort difficulty asc, file.name asc
 ```

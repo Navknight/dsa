@@ -40,7 +40,7 @@ vector<int> dijkstra(int src, vector<vector<pair<int,int>>>& adj, int n) {
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Dijkstra")
 sort difficulty asc, file.name asc
 ```

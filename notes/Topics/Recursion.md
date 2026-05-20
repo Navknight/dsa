@@ -11,7 +11,7 @@ Pure recursive problem solving
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Recursion")
 sort difficulty asc, file.name asc
 ```

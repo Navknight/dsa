@@ -3,9 +3,9 @@ difficulty: Easy
 topics: ["Stack"]
 source: Leetcode
 star: false
-code: ../../../LeetCode/baseball_game.cpp
+code: LeetCode/baseball_game.cpp
 ---
-
+[[LeetCode/baseball_game.cpp]]
 [[Stack]]
 
 You are keeping the scores for a baseball game with strange rules. At the beginning of the game, you start with an empty record.

@@ -4,9 +4,9 @@ topics: ["Trees"]
 source: Leetcode
 star: false
 link: "https://leetcode.com/problems/binary-tree-level-order-traversal/description/"
-code: ../../../LeetCode/binary_tree_level_order_traversal.cpp
+code: LeetCode/binary_tree_level_order_traversal.cpp
 ---
-
+[[LeetCode/binary_tree_level_order_traversal.cpp]]
 [[Trees]]
 
 Maintain an array of each level and push the array to the ans array

@@ -3,9 +3,9 @@ difficulty: Medium
 topics: ["Simulation"]
 source: Leetcode
 star: false
-code: ../../../LeetCode/robot_bounded_in_circle.cpp
+code: LeetCode/robot_bounded_in_circle.cpp
 ---
-
+[[LeetCode/robot_bounded_in_circle.cpp]]
 [[Simulation]]
 
 [Robot Bounded In Circle - LeetCode](https://leetcode.com/problems/robot-bounded-in-circle/?envType=study-plan-v2&id=programming-skills) #  # -  loop over the instructions string and according to each instruction - G,L,R. update a set of integers - x,y,dir

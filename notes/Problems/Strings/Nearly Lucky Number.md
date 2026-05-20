@@ -4,9 +4,9 @@ topics: ["Strings", "Math"]
 source: CodeForces
 star: false
 link: "https://codeforces.com/problemset/problem/110/A"
-code: ../../../CodeForces/A_Nearly_Lucky_Number.cpp
+code: CodeForces/A_Nearly_Lucky_Number.cpp
 ---
-
+[[CodeForces/A_Nearly_Lucky_Number.cpp]]
 [[Strings]] [[Math]]
 
 ```cpp

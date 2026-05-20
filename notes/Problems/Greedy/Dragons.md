@@ -4,9 +4,9 @@ topics: ["Greedy", "Sorting"]
 source: CodeForces
 star: false
 link: "https://codeforces.com/problemset/problem/230/A"
-code: ../../../CodeForces/A_Dragons.cpp
+code: CodeForces/A_Dragons.cpp
 ---
-
+[[CodeForces/A_Dragons.cpp]]
 [[Greedy]] [[Sorting]]
 
 ```cpp

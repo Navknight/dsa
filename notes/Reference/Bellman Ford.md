@@ -36,7 +36,7 @@ vector<int> bellmanFord(int src, vector<tuple<int,int,int>>& edges, int n) {
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Bellman Ford")
 sort difficulty asc, file.name asc
 ```

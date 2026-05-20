@@ -3,9 +3,9 @@ difficulty: Easy
 topics: ["Strings"]
 source: CodeForces
 star: false
-code: ../../../CodeForces/A_k_String.cpp
+code: CodeForces/A_k_String.cpp
 ---
-
+[[CodeForces/A_k_String.cpp]]
 [[Strings]]
 
 [Problem - 219A - Codeforces](https://codeforces.com/problemset/problem/219/A)

@@ -4,9 +4,9 @@ topics: ["Dynamic Programming", "Recursion"]
 source: Leetcode
 star: true
 link: "https://leetcode.com/problems/edit-distance/?envType=study-plan-v2&envId=dynamic-programming"
-code: ../../../LeetCode/edit_distance.cpp
+code: LeetCode/edit_distance.cpp
 ---
-
+[[LeetCode/edit_distance.cpp]]
 [[Dynamic Programming]] [[Recursion]]
 
 Given two strings `word1` and `word2`, return _the minimum number of operations required to convert `word1` to `word2`_.

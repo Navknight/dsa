@@ -4,9 +4,9 @@ topics: ["Graphs"]
 source: CodeForces
 star: false
 link: "https://codeforces.com/problemset/problem/500/A"
-code: ../../../CodeForces/A_New_Year_Transportation.cpp
+code: CodeForces/A_New_Year_Transportation.cpp
 ---
-
+[[CodeForces/A_New_Year_Transportation.cpp]]
 [[Graphs]]
 
 In this problem I implemented the graph as a vector of pairs representing an  edge list sort of

@@ -11,7 +11,7 @@ LIFO problems, monotonic stack
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Stack")
 sort difficulty asc, file.name asc
 ```

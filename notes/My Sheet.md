@@ -4,7 +4,7 @@
 
 ```dataview
 table difficulty, topics, source, star
-from "Problems"
+from "notes/Problems"
 sort difficulty asc, file.name asc
 ```
 
@@ -14,7 +14,7 @@ sort difficulty asc, file.name asc
 
 ```dataview
 table difficulty, topics, source
-from "Problems"
+from "notes/Problems"
 where star = true
 sort difficulty asc
 ```
@@ -25,7 +25,7 @@ sort difficulty asc
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Graphs")
 sort difficulty asc
 ```
@@ -36,7 +36,7 @@ sort difficulty asc
 
 ```dataview
 table difficulty, topics, star
-from "Problems"
+from "notes/Problems"
 where source = "Leetcode"
 sort difficulty asc, file.name asc
 ```
@@ -47,7 +47,7 @@ sort difficulty asc, file.name asc
 
 ```dataview
 table topics, source, star
-from "Problems"
+from "notes/Problems"
 where difficulty = "Hard"
 sort file.name asc
 ```
@@ -58,6 +58,6 @@ sort file.name asc
 
 ```dataview
 table length(rows) as Count
-from "Problems"
+from "notes/Problems"
 group by difficulty
 ```

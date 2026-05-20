@@ -4,9 +4,9 @@ topics: ["Matrix", "Recursion", "Dynamic Programming"]
 source: Leetcode
 star: true
 link: "https://leetcode.com/problems/maximal-square/submissions/963073692/?envType=study-plan-v2&envId=dynamic-programming"
-code: ../../../LeetCode/maximal_square.cpp
+code: LeetCode/maximal_square.cpp
 ---
-
+[[LeetCode/maximal_square.cpp]]
 [[Matrix]] [[Recursion]] [[Dynamic Programming]]
 
 The basic idea is that we can consider each cell as the top left cell of a square, then we can check the right, down, and diagonally right cells of the current cell and see if they form a square, now we call this function again on the right, down, diag cells and check if they form a square with them as the top left cell of the square.

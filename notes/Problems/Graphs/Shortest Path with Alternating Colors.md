@@ -3,9 +3,9 @@ difficulty: Medium
 topics: ["Graphs", "BFS"]
 source: Leetcode
 star: false
-code: ../../../LeetCode/Shortest_Path_with_Alternating_Colors.cpp
+code: LeetCode/Shortest_Path_with_Alternating_Colors.cpp
 ---
-
+[[LeetCode/Shortest_Path_with_Alternating_Colors.cpp]]
 [[Graphs]] [[BFS]]
 
 Link :: [Leetcode](https://leetcode.com/problems/shortest-path-with-alternating-colors/description/?envType=study-plan-v2&envId=graph-theory)

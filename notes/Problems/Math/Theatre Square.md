@@ -4,9 +4,9 @@ topics: ["Math"]
 source: CodeForces
 star: false
 link: "https://codeforces.com/problemset/problem/1/A"
-code: ../../../CodeForces/A_Theatre_Square.cpp
+code: CodeForces/A_Theatre_Square.cpp
 ---
-
+[[CodeForces/A_Theatre_Square.cpp]]
 [[Math]]
 
 ```cpp

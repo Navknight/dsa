@@ -47,7 +47,7 @@ int prim(int src, vector<vector<pair<int,int>>>& adj, int n) {
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "MST")
 sort difficulty asc, file.name asc
 ```

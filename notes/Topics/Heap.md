@@ -11,7 +11,7 @@ Priority queue, kth largest/smallest
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Heap")
 sort difficulty asc, file.name asc
 ```

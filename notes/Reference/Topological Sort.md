@@ -46,7 +46,7 @@ void dfsTopo(int u, vector<vector<int>>& adj, vector<bool>& vis, stack<int>& st)
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Topological Sort")
 sort difficulty asc, file.name asc
 ```

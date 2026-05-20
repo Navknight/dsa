@@ -11,7 +11,7 @@ Locally optimal choices for globally optimal solution
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Greedy")
 sort difficulty asc, file.name asc
 ```

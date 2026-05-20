@@ -4,9 +4,9 @@ topics: ["Strings"]
 source: CodeForces
 star: false
 link: "https://codeforces.com/problemset/problem/32/B"
-code: ../../../CodeForces/B_Borze.cpp
+code: CodeForces/B_Borze.cpp
 ---
-
+[[CodeForces/B_Borze.cpp]]
 [[Strings]]
 
 ```cpp

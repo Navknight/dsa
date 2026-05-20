@@ -4,9 +4,9 @@ topics: ["Linked Lists"]
 source: Leetcode
 star: false
 link: "https://leetcode.com/problems/intersection-of-two-linked-lists/"
-code: ../../../LeetCode/intersection_of_two_linked_lists.cpp
+code: LeetCode/intersection_of_two_linked_lists.cpp
 ---
-
+[[LeetCode/intersection_of_two_linked_lists.cpp]]
 [[Linked Lists]]
 
 We are given two heads of two singly linked lists which become one at a particular node. We need to find which node that is.

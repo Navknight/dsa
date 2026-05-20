@@ -4,9 +4,9 @@ topics: ["Dynamic Programming"]
 source: Leetcode
 star: false
 link: "https://leetcode.com/problems/perfect-squares/"
-code: ../../../LeetCode/perfect_squares.cpp
+code: LeetCode/perfect_squares.cpp
 ---
-
+[[LeetCode/perfect_squares.cpp]]
 [[Dynamic Programming]]
 
 # Problem

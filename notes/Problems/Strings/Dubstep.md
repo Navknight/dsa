@@ -3,9 +3,9 @@ difficulty: Easy
 topics: ["Strings"]
 source: CodeForces
 star: false
-code: ../../../CodeForces/A_Dubstep.cpp
+code: CodeForces/A_Dubstep.cpp
 ---
-
+[[CodeForces/A_Dubstep.cpp]]
 [[Strings]]
 
 [Problem - 208A - Codeforces](https://codeforces.com/problemset/problem/208/A)

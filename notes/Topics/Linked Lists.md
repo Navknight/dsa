@@ -11,7 +11,7 @@ Singly/doubly linked list problems
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Linked Lists")
 sort difficulty asc, file.name asc
 ```

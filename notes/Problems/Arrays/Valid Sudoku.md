@@ -6,8 +6,9 @@ source: Leetcode
 star: false
 link: https://leetcode.com/problems/valid-sudoku/description/
 date: 2026-05-18
-code: ../../../LeetCode/Valid_sudoku.cpp
+code: LeetCode/Valid_sudoku.cpp
 ---
+[[LeetCode/Valid_sudoku.cpp]]
 [[Arrays]]
 # Problem
 Validate if the matrix is a correct sudoku

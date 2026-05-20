@@ -4,9 +4,9 @@ topics: ["Dynamic Programming"]
 source: Leetcode
 star: true
 link: "https://leetcode.com/problems/longest-arithmetic-subsequence"
-code: ../../../LeetCode/longest_arithmetic_subsequence.cpp
+code: LeetCode/longest_arithmetic_subsequence.cpp
 ---
-
+[[LeetCode/longest_arithmetic_subsequence.cpp]]
 [[Dynamic Programming]]
 
 # Problem

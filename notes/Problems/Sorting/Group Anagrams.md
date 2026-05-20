@@ -3,9 +3,9 @@ difficulty: Medium
 topics: ["Sorting"]
 source: Leetcode
 star: false
-code: ../../../LeetCode/group_anagrams.cpp
+code: LeetCode/group_anagrams.cpp
 ---
-
+[[LeetCode/group_anagrams.cpp]]
 [[Sorting]]
 
  [Group Anagrams]([Group Anagrams - LeetCode](https://leetcode.com/problems/group-anagrams/?envType=study-plan&id=programming-skills-ii))   

@@ -11,7 +11,7 @@ Array manipulation, prefix sums, matrix problems
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Arrays")
 sort difficulty asc, file.name asc
 ```

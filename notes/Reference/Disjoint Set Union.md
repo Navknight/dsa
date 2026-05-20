@@ -42,7 +42,7 @@ struct DSU {
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Disjoint Set Union")
 sort difficulty asc, file.name asc
 ```

@@ -11,7 +11,7 @@ Binary trees, BST, tree traversal, DP on trees
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Trees")
 sort difficulty asc, file.name asc
 ```

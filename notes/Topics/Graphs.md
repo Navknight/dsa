@@ -11,7 +11,7 @@ BFS/DFS, shortest path, spanning trees, union-find
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Graphs")
 sort difficulty asc, file.name asc
 ```

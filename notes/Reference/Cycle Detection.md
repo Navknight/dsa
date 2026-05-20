@@ -47,7 +47,7 @@ bool hasCycle(ListNode* head) {
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Cycle Detection")
 sort difficulty asc, file.name asc
 ```

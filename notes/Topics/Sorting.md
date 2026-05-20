@@ -11,7 +11,7 @@ Comparison sorts, counting sort, merge sort
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Sorting")
 sort difficulty asc, file.name asc
 ```

@@ -44,7 +44,7 @@ vector<vector<int>> build2D(vector<vector<int>>& mat) {
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Prefix Sum")
 sort difficulty asc, file.name asc
 ```

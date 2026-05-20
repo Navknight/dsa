@@ -11,14 +11,14 @@
             "id": "bf841eed90a56c5f",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "notes/Problems/Hash Maps/3Sum.md",
-                "bFile": "notes/Problems/Hash Maps/3Sum.md",
-                "aRef": ""
+                "file": "Problems/Sliding Window/Permutation In String.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 3Sum  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Permutation In String"
             }
           }
         ]
@@ -150,23 +150,13 @@
               "icon": "lucide-list",
               "title": "Outline of Frequency of the Most Frequent Element"
             }
-          },
-          {
-            "id": "4b58e404bbe3cd7f",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 561.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,14 +167,13 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-git:Open Git source control": false
+      "templater-obsidian:Templater": false
     }
   },
   "active": "bf841eed90a56c5f",
   "lastOpenFiles": [
-    "Problems/Sliding Window/Permutation In String.md",
     "Problems/Two Pointers/Trapping Rain Water.md",
+    "Problems/Sliding Window/Permutation In String.md",
     "My Sheet.md",
     "Problems/Dynamic Programming/Knapsack/Number Of Coins.md",
     "Problems/Arrays/Two Sum II - Input Array Is Sorted.md",

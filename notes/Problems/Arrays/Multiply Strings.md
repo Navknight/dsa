@@ -3,9 +3,9 @@ difficulty: Easy
 topics: []
 source: Leetcode
 star: false
-code: ../../../LeetCode/multiply_strings.cpp
+code: LeetCode/multiply_strings.cpp
 ---
-
+[[LeetCode/multiply_strings.cpp]]
 [Multiply Strings](https://leetcode.com/problems/multiply-strings/?envType=study-plan&id=programming-skills-ii) , #  - Using the normal multiplication algorithm and treating strings as arrays of characters
 
 ```

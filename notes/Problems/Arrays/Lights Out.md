@@ -4,9 +4,9 @@ topics: ["Arrays", "Matrix"]
 source: CodeForces
 star: false
 link: "https://codeforces.com/problemset/problem/275/A"
-code: ../../../CodeForces/A_Lights_Out.cpp
+code: CodeForces/A_Lights_Out.cpp
 ---
-
+[[CodeForces/A_Lights_Out.cpp]]
 [[Arrays]] [[Matrix]]
 
 ```cpp

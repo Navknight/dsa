@@ -11,7 +11,7 @@ Number theory, modular arithmetic, geometry
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Math")
 sort difficulty asc, file.name asc
 ```

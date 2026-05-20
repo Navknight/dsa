@@ -3,9 +3,9 @@ difficulty: Easy
 topics: []
 source: Leetcode
 star: false
-code: ../../../LeetCode/length_of_last_word.cpp
+code: LeetCode/length_of_last_word.cpp
 ---
-
+[[LeetCode/length_of_last_word.cpp]]
  [Length of last word](https://leetcode.com/problems/length-of-last-word/?envType=study-plan&id=programming-skills-ii) , #  - Simple counting problem
 
 

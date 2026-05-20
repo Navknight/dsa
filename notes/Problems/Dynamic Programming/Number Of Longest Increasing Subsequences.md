@@ -4,9 +4,9 @@ topics: ["Dynamic Programming"]
 source: Leetcode
 star: true
 link: "https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/?envType=study-plan-v2&envId=dynamic-programming"
-code: ../../../LeetCode/number_of_longest_increasing_subsequences.cpp
+code: LeetCode/number_of_longest_increasing_subsequences.cpp
 ---
-
+[[LeetCode/number_of_longest_increasing_subsequences.cpp]]
 [[Dynamic Programming]]
 
 # Problem

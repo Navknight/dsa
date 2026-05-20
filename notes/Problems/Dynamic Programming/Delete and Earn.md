@@ -3,9 +3,9 @@ difficulty: Medium
 topics: ["Dynamic Programming"]
 source: Leetcode
 star: false
-code: ../../../LeetCode/Delete_and_earn.cpp
+code: LeetCode/Delete_and_earn.cpp
 ---
-
+[[LeetCode/Delete_and_earn.cpp]]
 [[Dynamic Programming]]
 
 [[House Robber]] 

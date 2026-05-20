@@ -4,9 +4,9 @@ topics: ["Math"]
 source: CodeForces
 star: false
 link: "https://codeforces.com/problemset/problem/69/A"
-code: ../../../CodeForces/A_Young_Physicist.cpp
+code: CodeForces/A_Young_Physicist.cpp
 ---
-
+[[CodeForces/A_Young_Physicist.cpp]]
 [[Math]]
 
 ```cpp

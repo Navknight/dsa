@@ -3,9 +3,9 @@ difficulty: Medium
 topics: ["Dynamic Programming"]
 source: Leetcode
 star: false
-code: ../../../LeetCode/House_robber.cpp
+code: LeetCode/House_robber.cpp
 ---
-
+[[LeetCode/House_robber.cpp]]
 [[Dynamic Programming]]
 
 [House Robber - LeetCode](https://leetcode.com/problems/house-robber/?envType=study-plan-v2&id=dynamic-programming) This Problem is like [[01 KnapSack]].  

@@ -4,9 +4,9 @@ topics: ["Recursion", "Dynamic Programming"]
 source: Leetcode
 star: false
 link: "https://leetcode.com/problems/longest-increasing-subsequence/?envType=study-plan-v2&envId=dynamic-programming"
-code: ../../../LeetCode/longest_increasing_subsequence.cpp
+code: LeetCode/longest_increasing_subsequence.cpp
 ---
-
+[[LeetCode/longest_increasing_subsequence.cpp]]
 [[Recursion]] [[Dynamic Programming]]
 
 # Problem

@@ -11,7 +11,7 @@ Memoization and tabulation — overlapping subproblems
 
 ```dataview
 table difficulty, source, star
-from "Problems"
+from "notes/Problems"
 where contains(topics, "Dynamic Programming")
 sort difficulty asc, file.name asc
 ```
