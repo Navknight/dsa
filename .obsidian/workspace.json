@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/My Sheet.md",
+                "file": "notes/Topics/Deque.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "My Sheet"
+              "title": "Deque"
             }
           }
         ]
@@ -146,8 +146,8 @@
                 "showSearch": false,
                 "searchQuery": ""
               },
-              "icon": "lucide-archive",
-              "title": "All properties"
+              "icon": "lucide-ghost",
+              "title": "all-properties"
             }
           },
           {
@@ -195,21 +195,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "afa1ad3190a45bba",
+  "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
+    "CodeForces/A_Arrival_of_the_General.cpp",
+    "A_Arrival_of_the_General.exe",
+    "A_Arrival_of_the_General.bin",
+    "a.exe",
+    "A_Arrival_of_the_General.cpp",
+    "notes/Topics/Deque.md.tmp.11092.082da3699360",
+    "notes/Topics/Deque.md.tmp.11092.4600fec7b4b8",
+    "notes/Problems/Sliding Window/Sliding Window Maximum.md",
+    "notes/Topics/Deque.md",
+    "notes/Topics/Bit Manipulation.md",
+    "notes/Topics/Dynamic Programming.md",
+    "notes/Temp/CodeForces.md",
+    "notes/My Sheet.md",
     "notes/Temp/LeetCode.md",
     "notes/Temp/LeetCode.md.tmp.14420.e6ac6eec2bc3",
-    "notes/Temp/CodeForces.md",
     "notes/Temp/CodeForces.md.tmp.14420.33c6db230e66",
     "scripts/link_notes.py.tmp.14420.65ef20d8fded",
     "scripts/link_notes.py.tmp.14420.829c528fdd96",
     "notes/Problems/Arrays/Beautiful Matrix.md",
-    "notes/scripts/README.md",
-    "notes/scripts/migrate.py",
-    "notes/scripts/fix_shadows.py",
-    "notes/scripts/fix_dynamic.py",
-    "notes/scripts/create_references.py",
-    "notes/scripts",
-    "scripts/link_notes.py.tmp.14420.5a8a2263ae0b"
+    "notes/scripts/README.md"
   ]
 }
