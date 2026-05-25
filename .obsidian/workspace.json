@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Topics/Deque.md",
+                "file": "notes/Problems/Stack/Min Stack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deque"
+              "title": "Min Stack"
             }
           }
         ]
@@ -197,6 +197,8 @@
   },
   "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
+    "notes/Topics/Deque.md",
+    "notes/Problems/Stack/Min Stack.md",
     "CodeForces/A_Arrival_of_the_General.cpp",
     "A_Arrival_of_the_General.exe",
     "A_Arrival_of_the_General.bin",
@@ -205,7 +207,6 @@
     "notes/Topics/Deque.md.tmp.11092.082da3699360",
     "notes/Topics/Deque.md.tmp.11092.4600fec7b4b8",
     "notes/Problems/Sliding Window/Sliding Window Maximum.md",
-    "notes/Topics/Deque.md",
     "notes/Topics/Bit Manipulation.md",
     "notes/Topics/Dynamic Programming.md",
     "notes/Temp/CodeForces.md",
@@ -214,7 +215,6 @@
     "notes/Temp/LeetCode.md.tmp.14420.e6ac6eec2bc3",
     "notes/Temp/CodeForces.md.tmp.14420.33c6db230e66",
     "scripts/link_notes.py.tmp.14420.65ef20d8fded",
-    "scripts/link_notes.py.tmp.14420.829c528fdd96",
     "notes/Problems/Arrays/Beautiful Matrix.md",
     "notes/scripts/README.md"
   ]
