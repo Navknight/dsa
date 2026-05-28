@@ -6,23 +6,13 @@ star: false
 link: "<% tp.system.prompt("Problem URL (leave blank if none)") %>"
 date: <% tp.date.now("YYYY-MM-DD") %>
 ---
-
-<% tp.system.prompt("Paste topics as wikilinks (e.g. Arrays Hash Maps)") %>
-
 # Problem
-
 <% tp.system.prompt("Brief problem description") %>
-
 # Approach
-
-
-
 # Code
-
 ```cpp
 
 ```
-
 # Complexity
 - Time:
 - Space:

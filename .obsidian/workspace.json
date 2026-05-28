@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Problems/Stack/Min Stack.md",
+                "file": "notes/Problems/Stack/Daily Temperatures.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Min Stack"
+              "title": "Daily Temperatures"
             }
           }
         ]
@@ -197,8 +197,12 @@
   },
   "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
-    "notes/Topics/Deque.md",
+    "notes/Problems/Stack/Daily Temperatures.md",
+    "notes/Problems/Stack/Daily Temperatures.md",
+    "notes/Problems/Stack/Evaluate Reverse Polish Notation.md",
+    "notes/Temp/Problem.md",
     "notes/Problems/Stack/Min Stack.md",
+    "notes/Topics/Deque.md",
     "CodeForces/A_Arrival_of_the_General.cpp",
     "A_Arrival_of_the_General.exe",
     "A_Arrival_of_the_General.bin",
