@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Problems/Stack/Daily Temperatures.md",
+                "file": "notes/Problems/Stack/Car Fleet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Temperatures"
+              "title": "Car Fleet"
             }
           }
         ]
@@ -197,6 +197,8 @@
   },
   "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
+    "notes/Topics/Stack.md",
+    "notes/Problems/Stack/Car Fleet.md",
     "notes/Problems/Stack/Daily Temperatures.md",
     "notes/Problems/Stack/Daily Temperatures.md",
     "notes/Problems/Stack/Evaluate Reverse Polish Notation.md",
