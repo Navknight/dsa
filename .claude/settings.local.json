@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m json.tool)",
+      "Read(//home/navknight/Github/navknight.github.io/src/**)",
+      "Read(//home/navknight/Github/navknight.github.io/src/data/**)",
+      "Read(//home/navknight/Github/navknight.github.io/**)",
+      "Bash(node scripts/sync-dsa-notes.js)",
+      "Bash(grep -rA2 \"^topics:$\" /home/navknight/Github/dsa/notes/Problems/)"
+    ]
+  }
+}

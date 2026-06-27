@@ -1,6 +1,6 @@
 ---
 difficulty: Medium
-topics: ["Simulation"]
+topics: ["Math", "Strings"]
 source: Leetcode
 star: false
 code: LeetCode/robot_bounded_in_circle.cpp

@@ -1,6 +1,6 @@
 ---
 difficulty: Easy
-topics: ["Graphs", "BFS", "Cycle Detection"]
+topics: ["Graphs", "BFS", "DFS"]
 source: Standard
 star: false
 link: "https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/"

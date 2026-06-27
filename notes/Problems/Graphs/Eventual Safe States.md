@@ -1,6 +1,6 @@
 ---
 difficulty: Medium
-topics: ["Graphs", "Cycle Detection", "BFS"]
+topics: ["Graphs", "DFS", "BFS"]
 source: Standard
 star: false
 link: "https://leetcode.com/problems/find-eventual-safe-states/"

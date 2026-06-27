@@ -1,6 +1,6 @@
 ---
 difficulty: Easy
-topics: ["Strings", "Simulation"]
+topics: ["Strings", "Math"]
 source: Leetcode
 star: false
 code: LeetCode/robot_return_to_origin.cpp
