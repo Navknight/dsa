@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Problems/Linked Lists/Intersection Of Two Linked Lists.md",
+                "file": "notes/Problems/Linked Lists/LRU Cache.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Intersection Of Two Linked Lists"
+              "title": "LRU Cache"
             }
           }
         ]
@@ -197,6 +197,11 @@
   },
   "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
+    "CLAUDE.md",
+    "CLAUDE.md.tmp.141590.9ceb6e3ba6d0",
+    "notes/Problems/Linked Lists/Intersection Of Two Linked Lists.md",
+    "notes/Problems/Linked Lists/LRU Cache.md",
+    "notes/Problems/Linked Lists/LRU Cache.md.tmp.141590.70c6103ee68a",
     "notes/Problems/Linked Lists/Find the Duplicate Number.md",
     "notes/Problems/Linked Lists/Copy List With Random Pointer.md",
     "notes/Problems/Strings/Robot Bounded in Circle.md.tmp.101229.5a28e146c287",
@@ -221,15 +226,12 @@
     "notes/Problems/Stack/Min Stack.md",
     "notes/Topics/Deque.md",
     "CodeForces/A_Arrival_of_the_General.cpp",
-    "A_Arrival_of_the_General.exe",
-    "A_Arrival_of_the_General.bin",
     "notes/Problems/Sliding Window/Sliding Window Maximum.md",
     "notes/Topics/Bit Manipulation.md",
     "notes/Topics/Dynamic Programming.md",
     "notes/Temp/CodeForces.md",
     "notes/My Sheet.md",
     "notes/Temp/LeetCode.md",
-    "notes/Problems/Arrays/Beautiful Matrix.md",
-    "notes/scripts/README.md"
+    "notes/Problems/Arrays/Beautiful Matrix.md"
   ]
 }
