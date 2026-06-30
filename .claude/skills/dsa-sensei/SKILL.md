@@ -42,8 +42,8 @@ date: YYYY-MM-DD
 ```
 
 ### Complexity
-- Time: O(...)
-- Space: O(...)
+- Time: $O(...)$
+- Space: $O(...)$
 ```
 
 **Reference note format:**

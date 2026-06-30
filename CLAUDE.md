@@ -38,7 +38,13 @@ No build system — each `.cpp` compiles standalone.
 
 ## Obsidian Vault
 
+### Writing Style for Notes
+
+Notes must read like the user wrote them — terse, direct, no filler. If the user's explanation is unclear, tighten it minimally. Never introduce AI artifacts: no em-dashes (—), no Oxford-comma lists, no "it's worth noting", no passive constructions. Plain language only.
+
 ### Problem Note Format
+
+Save new notes to `notes/Problems/<Topic>/` where `<Topic>` matches one of the taxonomy names below.
 
 ```yaml
 ---
@@ -46,7 +52,7 @@ difficulty: Easy|Medium|Hard
 topics:
   - TopicName
 source: Leetcode|CodeForces|GFG|Standard|AtCoder
-star: false
+star: false   # set true to flag for revisiting
 link: https://...
 date: YYYY-MM-DD
 ---
@@ -66,8 +72,8 @@ date: YYYY-MM-DD
 ```
 
 ### Complexity
-- Time: O(...)
-- Space: O(...)
+- Time: $O(...)$
+- Space: $O(...)$
 ```
 
 ### Topic Taxonomy
@@ -97,4 +103,15 @@ Don't run this script on Linux — paths are Windows-only. Vault notes in `notes
 
 ## DSA Sensei Skill
 
-`.claude/skills/dsa-sensei/` — a custom Claude Code skill for interactive DSA mentoring. Invoke with `/dsa-sensei`. Modes: hint, review, pattern, note generation, mock interview (LC/CF), topic drill. See `SKILL.md` for full spec.
+`.claude/skills/dsa-sensei/` — custom Claude Code skill for interactive DSA mentoring. Invoke with `/dsa-sensei`. Explicit sub-commands:
+
+| Command | Purpose |
+|---------|---------|
+| `/dsa-sensei review <code>` | Bug check + complexity + vault comparison |
+| `/dsa-sensei hint` | Progressive 5-level hints (no free solutions) |
+| `/dsa-sensei pattern` | Identify algorithm pattern + vault reference |
+| `/dsa-sensei note` | Generate paste-ready Obsidian note |
+| `/dsa-sensei mock [lc\|cf]` | Simulated interview with scoring |
+| `/dsa-sensei topic <Name>` | Drill weak topic, gap analysis from vault |
+
+See `.claude/skills/dsa-sensei/SKILL.md` for full spec.

@@ -14,5 +14,5 @@ date: <% tp.date.now("YYYY-MM-DD") %>
 
 ```
 # Complexity
-- Time:
-- Space:
+- Time: $O()$
+- Space: $O()$

@@ -1,11 +1,12 @@
 ---
 difficulty: Easy
-topics: ["Recursion", "Dynamic Programming"]
+topics:
+  - Recursion
 source: Standard
 star: false
 ---
 
-[[Recursion]] [[Dynamic Programming]]
+[[Recursion]]
 
 # Problem
 The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two end nodes. The diagram below shows two trees each with diameter nine, the leaves that form the ends of the longest path are shaded (note that there is more than one path in each tree of length nine, but no path longer than nine nodes).

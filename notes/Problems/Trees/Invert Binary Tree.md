@@ -1,24 +1,40 @@
 ---
 difficulty: Easy
-topics: ["Trees"]
+topics:
+  - Trees
+  - Recursion
 source: Leetcode
 star: false
-link: "https://leetcode.com/problems/invert-binary-tree/description/"
+link: https://leetcode.com/problems/invert-binary-tree/
+date: 2026-06-28
 ---
 
-[[Trees]]
+[[Trees]] [[Recursion]]
 
-Invert the right and left, then place the inverted right to left and inverted left to right
+# Problem
+Given root of a binary tree, invert it (mirror) and return the root.
 
+# Approach
+## Recursive Post-order Swap
+
+Invert both subtrees recursively, then swap them at the root. Post-order matters: invert children before touching the current node.
+
+### Code
 ```cpp
 TreeNode* invertTree(TreeNode* root) {
-	if(root == nullptr) return nullptr;
+    if (!root)
+        return nullptr;
 
-	TreeNode* temp = root->left;
-	root->left = invertTree(root->right);
-	root->right = invertTree(temp);
+    TreeNode* right = invertTree(root->left);
+    TreeNode* left = invertTree(root->right);
 
-	return root;
+    root->right = right;
+    root->left = left;
+
+    return root;
 }
 ```
 
+### Complexity
+- Time: $O(n)$
+- Space: $O(h)$ recursion stack, h = tree height

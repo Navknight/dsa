@@ -29,5 +29,5 @@ code: <%= codeFile %>
 
 
 # Complexity
-- Time:
-- Space:
+- Time: $O()$
+- Space: $O()$
