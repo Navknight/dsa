@@ -10,7 +10,7 @@ link: https://leetcode.com/problems/course-schedule/
 date: 2026-08-22
 ---
 
-[[Graphs]] [[Topological Sort]] [[DFS]] [[Cycle Detection]]
+[[Graphs]] [[Topological Sort]] [[DFS]] [[Cycle Detection]] [[Kahn's Algorithm]]
 
 # Problem
 Given `numCourses` and a list of prerequisite pairs `[a, b]` meaning course `a` requires course `b` first, determine whether all courses can be finished.
@@ -75,3 +75,47 @@ public:
 ### Complexity
 - Time: $O(V + E)$ — each node's DFS body runs once thanks to the `color == 2` short-circuit
 - Space: $O(V + E)$ for the adjacency list, plus $O(V)$ recursion stack
+
+## Kahn's Algorithm (BFS, In-Degree)
+Same $O(V+E)$ complexity as the DFS version, but iterative — no recursion stack, so no depth-limit risk on large `numCourses`. Also the more natural base if the problem ever asks for the actual order (Course Schedule II), since Kahn's produces that order as a byproduct; the DFS version would need a separate reverse-postorder step bolted on. See [[Kahn's Algorithm]].
+
+Build the graph in the same prerequisite direction (`b -> a` for `a` requires `b`) and track in-degree per node. Seed a queue with every node that has in-degree `0` (no prerequisites — can be taken immediately). Repeatedly pop a node, count it as completed, and decrement the in-degree of everything it points to, pushing any that drop to `0`. If a cycle exists, every course in it is permanently waiting on another course in the same cycle, so its in-degree never reaches `0` and it's never pushed — the final completed count comes up short of `numCourses`.
+
+### Code
+```cpp
+class Solution {
+public:
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        vector<vector<int>> graph(numCourses);
+        vector<int> indegree(numCourses, 0);
+
+        for (auto& v : prerequisites) {
+            graph[v[1]].push_back(v[0]);
+            indegree[v[0]]++;
+        }
+
+        queue<int> q;
+        for (int i = 0; i < numCourses; i++)
+            if (indegree[i] == 0)
+                q.push(i);
+
+        int completed = 0;
+        while (!q.empty()) {
+            int node = q.front();
+            q.pop();
+            completed++;
+
+            for (int next : graph[node]) {
+                if (--indegree[next] == 0)
+                    q.push(next);
+            }
+        }
+
+        return completed == numCourses;
+    }
+};
+```
+
+### Complexity
+- Time: $O(V + E)$
+- Space: $O(V + E)$ for the adjacency list and in-degree array, plus $O(V)$ for the queue
