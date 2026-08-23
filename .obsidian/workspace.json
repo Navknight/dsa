@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Reference/Topological Sort.md",
+                "file": "notes/Topics/Binary Search.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Topological Sort"
+              "title": "Binary Search"
             }
           }
         ]
@@ -199,8 +199,16 @@
   },
   "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
-    "notes/Problems/Graphs/Topological Sort.md",
+    "notes/Problems/Bit Manipulation/Sum of Two Integers.md",
+    "notes/Problems/Bit Manipulation/Missing Number.md",
+    "notes/Problems/Bit Manipulation/Reverse Bits.md",
+    "notes/Problems/Bit Manipulation/Counting Bits.md",
+    "notes/Problems/Bit Manipulation/Number of 1 Bits.md",
+    "notes/Problems/Dynamic Programming/Longest Common Subsequence.md",
     "notes/Reference/Topological Sort.md",
+    "notes/Problems/Dynamic Programming/Jump Game.md",
+    "notes/Problems/Dynamic Programming/Maximum Subarray.md",
+    "notes/Problems/Graphs/Topological Sort.md",
     "notes/Problems/Graphs/Alien Dictionary.md",
     "notes/Problems/Dynamic Programming/Longest Increasing Subsequence.md",
     "notes/Problems/Dynamic Programming/Word Break.md",
@@ -217,15 +225,7 @@
     "notes/Problems/Graphs/Number of Connected Components.md",
     "notes/Problems/Graphs/Graph Valid Tree.md",
     "notes/Reference/Cycle Detection.md",
-    "notes/Problems/Graphs/Course Schedule.md",
-    "notes/Problems/Graphs/Surrounded Regions.md",
-    "notes/Problems/Graphs/Pacific Atlantic Water Flow.md",
-    "notes/Problems/Graphs/Clone Graph.md",
-    "notes/Problems/Graphs/Number Of Islands.md",
-    "notes/Problems/Tries/Word Search II.md",
     "notes/Problems/Tries/Word Search II.md.tmp.8418.88055d2b17a5",
-    "notes/Problems/Backtracking/N-Queens.md",
-    "notes/Problems/Arrays/Implement Trie (Prefix Tree).md",
     "notes/Problems/Tries/Word Search II.md.tmp.8418.2cb1500f032c",
     "notes/Problems/Tries",
     "notes/Problems/Arrays/Implement Trie (Prefix Tree).md.tmp.8418.e20f20449d91",
