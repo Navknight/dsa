@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -94,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Leetcode/Frequency of the Most Frequent Element.md",
+                "file": "Problems/Sliding Window/Permutation In String.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Frequency of the Most Frequent Element"
+              "title": "Backlinks"
             }
           },
           {
@@ -167,11 +169,14 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "bf841eed90a56c5f",
   "lastOpenFiles": [
+    "Reference/Heap Sort.md",
+    "Reference/Untitled.md",
     "Problems/Two Pointers/Trapping Rain Water.md",
     "Problems/Sliding Window/Permutation In String.md",
     "My Sheet.md",
@@ -198,8 +203,6 @@
     "Problems/Dynamic Programming/LCS/Printing Longest Common Subsequence.md",
     "Problems/Dynamic Programming/LCS/Minimum Number of Deletions and Insertions.md",
     "Problems/Dynamic Programming/LCS/Minimum Number of deletions in a String to make is a palindrome.md",
-    "Problems/Dynamic Programming/Minimum ASCII Delete Sum for Two Strings.md",
-    "Problems/Dynamic Programming/Min Cost Climbing Stairs.md",
     "scripts/fix_shadows.py",
     "scripts/create_references.py",
     "scripts/fix_dynamic.py",

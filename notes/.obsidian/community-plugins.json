@@ -1,5 +1,6 @@
 [
   "dataview",
   "obsidian-tasks-plugin",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-git"
 ]
