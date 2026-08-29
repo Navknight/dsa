@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Problems/Heap/Last Stone Weight.md",
+                "file": "notes/Reference/Knapsack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Last Stone Weight"
+              "title": "Knapsack"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "codef",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,12 +71,16 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -199,12 +203,34 @@
   },
   "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
+    "notes/Reference/Knapsack.md.tmp.37288.51c616db2074",
+    "notes/Problems/Dynamic Programming/House Robber.md",
+    "notes/Reference/Knapsack.md",
+    "notes/Reference/Knapsack.md.tmp.37288.c7bb2e6e4166",
+    "notes/Problems/Dynamic Programming/Partition Equal Subset Sum.md",
+    "notes/Problems/Dynamic Programming/Partition Equal Subset Sum.md.tmp.37288.e5251ab4942f",
+    "notes/Topics/Dynamic Programming.md",
+    "notes/Reference/Disjoint Set Union.md",
+    "01 KnapSack.md",
+    "notes/Problems/Dynamic Programming/Min Cost Climbing Stairs.md.tmp.37288.c472aa7fe23e",
+    "notes/Problems/Graphs/Redundant Connection.md",
+    "notes/Problems/Graphs/Redundant Connection.md.tmp.37288.267476cc07c0",
+    "notes/Problems/Graphs/Kruskal's Algorithm.md",
+    "notes/Problems/Graphs/Disjoint Set Union.md",
+    "notes/Problems/Graphs/Course Schedule II.md",
+    "notes/Problems/Graphs/Surrounded Regions.md.tmp.37288.ea33eda33c07",
+    "notes/Problems/Graphs/Course Schedule II.md.tmp.37288.6ac62310f275",
+    "notes/Problems/Graphs/Course Schedule.md",
+    "notes/Problems/Graphs/Course Schedule II.md.tmp.37288.8453e5d70af1",
+    "notes/Problems/Graphs/Surrounded Regions.md",
+    "notes/Problems/Graphs/Surrounded Regions.md.tmp.37288.2cef505bbd0c",
+    "notes/Problems/Heap/Last Stone Weight.md",
+    "notes/Problems/Arrays/Arithmatic Subarrays.md",
     "notes/Problems/Graphs/Islands And Treasure.md",
     "notes/Problems/Graphs/Islands And Treasure.md.tmp.11573.63c39f98b732",
     "notes/Problems/Graphs/Max Area of Island.md",
     "notes/Problems/Graphs/Max Area of Island.md.tmp.11573.4aadac5433b0",
     "conflict-files-obsidian-git.md",
-    "notes/Problems/Heap/Last Stone Weight.md",
     "notes/Problems/Two Pointers/Palindromic Substrings.md",
     "notes/Problems/Two Pointers/Longest Palindromic Substring.md",
     "notes/Problems/Math/Count Array Pairs Divisible by K.md",
@@ -212,28 +238,6 @@
     "notes/Problems/Graphs/Pacific Atlantic Water Flow.md",
     "notes/Problems/Graphs/Number of Connected Components.md",
     "notes/Problems/Graphs/Graph Valid Tree.md",
-    "notes/Problems/Graphs/Course Schedule.md",
-    "notes/Problems/Dynamic Programming/Maximum Subarray.md",
-    "notes/Problems/Dynamic Programming/Maximum Product Subarray.md",
-    "notes/Problems/Dynamic Programming/Longest Common Subsequence.md",
-    "notes/Problems/Dynamic Programming/Jump Game.md",
-    "notes/Problems/Dynamic Programming/House Robber II.md",
-    "notes/Problems/Dynamic Programming/Decode Ways.md",
-    "notes/Problems/Bit Manipulation/Sum of Two Integers.md",
-    "notes/Problems/Bit Manipulation/Reverse Bits.md",
-    "notes/Problems/Bit Manipulation/Number of 1 Bits.md",
-    "notes/Problems/Bit Manipulation/Missing Number.md",
-    "notes/Problems/Bit Manipulation/Counting Bits.md",
-    "notes/Problems/Heap/Kth Largest Element in a Stream.md",
-    "notes/Problems/Heap/Kth Largest Element in a Stream.md.tmp.353540.9fa08d8b12c1",
-    "notes/Problems/Arrays/Kth Largest Element in an Array.md",
-    "notes/Problems/Arrays/Kth Largest Element in an Array.md.tmp.353540.40ddca66a628",
-    "notes/Problems/Arrays/K Closest Points to Origin.md.tmp.353540.40ee419b7b4d",
-    "notes/Reference/Heap Sort.md",
-    "notes/Reference/Heap Sort.md.tmp.353540.a638b262359e",
-    "notes/Problems/Tries/Word Search II.md.tmp.8418.88055d2b17a5",
-    "notes/Problems/Tries/Word Search II.md.tmp.8418.2cb1500f032c",
-    "notes/Problems/Tries",
-    "notes/Problems/Arrays/Implement Trie (Prefix Tree).md.tmp.8418.e20f20449d91"
+    "notes/Problems/Dynamic Programming/Maximum Subarray.md"
   ]
 }
