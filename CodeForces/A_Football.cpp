@@ -4,29 +4,26 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    string s;
+    cin >> s;
 
-    unordered_map<string, int> t;
-
-    for (int i = 0; i < n; i++)
+    int curr = 0, count = 0;
+    for (int i = 0; i < s.size(); i++)
     {
-        string s;
-        cin >> s;
-
-        t[s]++;
-    }
-    int in = INT32_MIN;
-    string ans = "";
-    for (auto i : t)
-    {
-        if (i.second > in)
+        if (s[i] - '0' == curr)
+            count++;
+        else
         {
-            in = i.second;
-            ans = i.first;
+            count = 1;
+            curr = s[i] - '0';
+        }
+
+        if (count == 7)
+        {
+            cout << "YES" << endl;
+            return 0;
         }
     }
-    cout << ans << endl;
 
-    return 0;
+    cout << "NO" << endl;
 }
