@@ -3,7 +3,7 @@ difficulty: Medium
 topics:
   - Math
 source: Leetcode
-star: false
+star: true
 link: https://leetcode.com/problems/reverse-integer/
 date: 2026-09-16
 ---
