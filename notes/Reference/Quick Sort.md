@@ -1,11 +1,7 @@
 ---
-difficulty: Medium
-topics: ["Sorting"]
-source: Standard
-star: false
+type: reference
+topic: Quick Sort
 ---
-
-[[Sorting]]
 
 ## Lomuto Method
 Taking the last element as the pivot. All elements before the pivot should be smaller than it, and all elements larger than the pivot should be larger than the pivot
@@ -42,5 +38,3 @@ class Solution {
     }
 };
 ```
-
-

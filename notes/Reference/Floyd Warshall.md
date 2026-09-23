@@ -25,12 +25,3 @@ void floydWarshall(vector<vector<int>>& dist, int n) {
                     dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
 }
 ```
-
-## Problems
-
-```dataview
-table difficulty, source, star
-from "notes/Problems"
-where contains(topics, "Floyd Warshall")
-sort difficulty asc, file.name asc
-```

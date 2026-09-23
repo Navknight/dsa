@@ -43,12 +43,3 @@ void bfs_grid(vector<vector<int>>& grid, int sr, int sc) {
     }
 }
 ```
-
-## Problems
-
-```dataview
-table difficulty, source, star
-from "notes/Problems"
-where contains(topics, "Matrix")
-sort difficulty asc, file.name asc
-```

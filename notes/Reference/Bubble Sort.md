@@ -1,12 +1,7 @@
 ---
-difficulty: Easy
-topics: ["Sorting"]
-source: GFG
-star: false
-link: "https://www.geeksforgeeks.org/problems/bubble-sort/1"
+type: reference
+topic: Bubble Sort
 ---
-
-[[Sorting]]
 
 ```cpp
 void bubbleSort(vector<int>& arr) {

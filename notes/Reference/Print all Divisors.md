@@ -1,12 +1,7 @@
 ---
-difficulty: Easy
-topics: ["Math"]
-source: GFG
-star: false
-link: "https://www.geeksforgeeks.org/problems/all-divisors-of-a-number/1"
+type: reference
+topic: Print all Divisors
 ---
-
-[[Math]]
 
 ```cpp
 void print_divisors(int n) {

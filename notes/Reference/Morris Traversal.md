@@ -1,11 +1,6 @@
 ---
-difficulty: Unknown
-topics: ["Trees"]
-source: Standard
-star: false
+type: reference
+topic: Morris Traversal
 ---
 
-[[Trees]]
-
 Given a binary tree, print the inorder traversal without using stack or recursion.
-

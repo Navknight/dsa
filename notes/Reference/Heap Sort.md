@@ -1,10 +1,8 @@
 ---
-difficulty: Medium
-topics: ["Sorting"]
-source: GFG
-star: false
-link: "https://www.geeksforgeeks.org/problems/heap-sort/1"
+type: reference
+topic: Heap Sort
 ---
+
 # Implementation
 Heap is a data structure where the root of a tree is either the largest or the smallest. So we use a max heap  where the root is the largest.
 1. Build a max heap from the array

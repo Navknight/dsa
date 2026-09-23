@@ -4,24 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Repo Is
 
-Dual-purpose: competitive programming solutions (C++) + an Obsidian knowledge vault (`notes/`) for DSA study. The vault is the source of truth for notes; the C++ files are the actual solutions.
+Obsidian DSA vault (`notes/`) plus CodeForces solutions. LeetCode/GFG code lives inside the problem notes, not in separate .cpp files.
 
 ## Repo Layout
 
 ```
-CodeForces/       CF solutions — named <Round>_<ProblemName>.cpp
-LeetCode/         LC solutions — named snake_case.cpp
-Atcoder/          AtCoder solutions
-DP-Basics/        Standalone DP practice
-Graphs-Basics/    Standalone graph practice
+CodeForces/       CF solutions (being redone) — named <Round>_<ProblemName>.cpp
 notes/
-  Problems/<Topic>/   Obsidian problem notes (158+ problems)
-  Reference/          Algorithm cheat sheets (29 files)
-  Topics/             Topic MOC files with Dataview queries
-  My Sheet.md         Master dashboard (Dataview)
-  scripts/            Vault maintenance scripts (Python)
-scripts/
-  link_notes.py       Syncs notes from Google Drive → repo, injects code: wikilinks
+  Problems/           Flat, one note per problem. Topics only in the `topics` property
+  Problems.base       Main table (Obsidian Bases): All, Starred, Due, Weak views
+  Reference/          Cheat sheets + topic hubs. Problems link to hubs via `topics`, each hub lists its backlinks
+  Templates/          Problem.md and Topic.md (hub) templates
 ```
 
 ## C++ Style
@@ -44,27 +37,31 @@ Notes must read like the user wrote them — terse, direct, no filler. If the us
 
 ### Problem Note Format
 
-Save new notes to `notes/Problems/<Topic>/` where `<Topic>` matches one of the taxonomy names below.
+Save new notes to `notes/Problems/<Problem Name>.md` (flat, no topic subfolders). The body is optional: a note can be only frontmatter, which makes it a row in `Problems.base`.
 
 ```yaml
 ---
+link: https://...
 difficulty: Easy|Medium|Hard
 topics:
-  - TopicName
-source: Leetcode|CodeForces|GFG|Standard|AtCoder
-star: false   # set true to flag for revisiting
-link: https://...
+  - "[[TopicName]]"   # link to the hub note in Reference/
+source: Leetcode|GFG|Standard
+star: false        # worth revisiting. Always true when blind75 is true
+blind75: false     # on the Blind 75 list
+mastery:           # red | yellow | green, set after a re-solve
+review:            # YYYY-MM-DD, next re-solve date
+insight: "one line, the key idea"
+time: "O(n)"       # plain text, no LaTeX, shows in the table
+space: "O(1)"
 date: YYYY-MM-DD
 ---
 
-[[Topic1]] [[Topic2]]
-
 # Problem
-<brief statement>
+<one-line statement>
 
 # Approach
 ## <Approach Name>
-<explanation>
+<1-3 lines, plus traps / mistakes I made as bullets>
 
 ### Code
 ```cpp
@@ -76,9 +73,14 @@ date: YYYY-MM-DD
 - Space: $O(...)$
 ```
 
+- `star` is my own flag for problems worth revisiting. `blind75` marks Blind 75 list membership. Every Blind 75 problem is also starred.
+- `time` / `space` are plain text (`O(n log n)`, `O(n²)`), no LaTeX, so they render in the table.
+- `insight` is one line: the idea you'd need to re-solve it.
+- Notes are terse: one-line problem, 1-3 lines per approach, code, complexity, traps as bullets.
+
 ### Topic Taxonomy
 
-Use **exactly** these names in `topics:` arrays:
+Use **exactly** these names in `topics:` arrays, as quoted links (`"[[Graphs]]"`). Each one is a note in `notes/Reference/`. DSU is `"[[Disjoint Set Union]]"`:
 `Arrays`, `Graphs`, `Dynamic Programming`, `Trees`, `Linked Lists`, `Binary Search`, `Stack`, `Heap`, `Hash Maps`, `Two Pointers`, `Sliding Window`, `Backtracking`, `Greedy`, `Sorting`, `Strings`, `Bit Manipulation`, `Math`, `Recursion`, `Deque`, `Dijkstra`, `BFS`, `DFS`, `DSU`, `Topological Sort`, `Tries`, `Monotonic Stack`, `Prefix Sum`
 
 ### Reference Note Format
@@ -90,16 +92,24 @@ topic: TopicName
 ---
 ```
 
-Body: one-line description + Big O, "When to Use" bullets, C++ template, Dataview query for related problems.
+Body: one-line description + Big O, "When to Use" bullets, C++ template, then an embedded base listing related problems:
 
-## Vault Sync Script
+```base
+filters:
+  and:
+    - file.inFolder("notes/Problems")
+    - file.hasLink(this.file)
+views:
+  - type: table
+    name: Problems
+    order: [file.name, insight, time, difficulty, star, mastery]
+```
 
-`scripts/link_notes.py` runs on Windows (paths hardcoded to `G:/My Drive/...` and `C:/Users/abhig/...`). It:
-1. Copies notes from Google Drive Obsidian vault → `notes/`
-2. Injects `code:` frontmatter field + `[[LeetCode/foo.cpp]]` wikilink by fuzzy-matching note filename to solution filename
-3. Fixes Dataview `from "Problems"` → `from "notes/Problems"` paths in Topics/Reference
+## Obsidian Setup
 
-Don't run this script on Linux — paths are Windows-only. Vault notes in `notes/` are the synced copy.
+Vault root is the repo root (`.obsidian/` at top level). Plugins: core Bases, Properties and Templates, plus obsidian-git. No Dataview, Templater or Tasks.
+
+CodeForces notes are removed while CF is being redone. `CodeForces/` holds only the new solutions.
 
 ## DSA Sensei Skill
 
@@ -110,7 +120,8 @@ Don't run this script on Linux — paths are Windows-only. Vault notes in `notes
 | `/dsa-sensei review <code>` | Bug check + complexity + vault comparison |
 | `/dsa-sensei hint` | Progressive 5-level hints (no free solutions) |
 | `/dsa-sensei pattern` | Identify algorithm pattern + vault reference |
-| `/dsa-sensei note` | Generate paste-ready Obsidian note |
+| `/dsa-sensei note` | Write a problem note into `notes/Problems/` |
+| `/dsa-sensei revise` | List due / weak problems, update mastery + review after a re-solve |
 | `/dsa-sensei mock [lc\|cf]` | Simulated interview with scoring |
 | `/dsa-sensei topic <Name>` | Drill weak topic, gap analysis from vault |
 

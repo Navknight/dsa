@@ -1,8 +1,6 @@
 ---
-difficulty: Unknown
-topics: []
-source: Standard
-star: false
+type: reference
+topic: priority_queue
 ---
 
 A `priority_queue` is a container adaptor that provides **constant-time access to the largest (or smallest) element**.  

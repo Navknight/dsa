@@ -1,11 +1,7 @@
 ---
-difficulty: Easy
-topics: ["Sorting"]
-source: Standard
-star: false
+type: reference
+topic: Insertion Sort
 ---
-
-[[Sorting]]
 
 ## Recursive
 

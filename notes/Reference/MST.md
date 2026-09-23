@@ -5,7 +5,7 @@ topic: MST
 
 # MST
 
-Minimum Spanning Tree — connects all vertices with minimum total edge weight. Two algorithms: Kruskal (sort edges + DSU) and Prim (greedy + heap).
+Minimum Spanning Tree: connects all vertices with minimum total edge weight. Two algorithms: Kruskal (sort edges + DSU) and Prim (greedy + heap).
 
 ## When to Use
 
@@ -41,13 +41,4 @@ int prim(int src, vector<vector<pair<int,int>>>& adj, int n) {
     }
     return cost;
 }
-```
-
-## Problems
-
-```dataview
-table difficulty, source, star
-from "notes/Problems"
-where contains(topics, "MST")
-sort difficulty asc, file.name asc
 ```

@@ -1,15 +1,9 @@
 ---
-difficulty: Unknown
-topics: ["Math", "Dynamic Programming"]
-source: Standard
-star: false
+type: reference
+topic: Catalan's Number
 ---
 
-[[Math]] [[Dynamic Programming]]
-
 # Catalan Numbers
-#DSA-Theory 
-
 Catalan numbers are a sequence of natural numbers that have important applications in various mathematical and combinatoric problems. They are named after the French-Belgian mathematician Eugene Charles Catalan.
 
 ## Definition

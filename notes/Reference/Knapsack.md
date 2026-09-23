@@ -15,7 +15,7 @@ Pick a subset of items under a capacity constraint. 0/1 = each item used once. U
 ## Method (Aditya Verma)
 1. Return type → inputs → base condition → choice diagram, in that order
 2. **Base condition** = smallest valid input, not "count down from n." E.g. `n==0` or `cap==0` → profit `0`
-3. **Choice diagram** — draw before coding:
+3. **Choice diagram**: draw before coding:
    - `wt[i] > cap` → only one branch: skip
    - `wt[i] <= cap` → two branches: skip (`solve(i-1, cap)`) or take (`val[i] + solve(i-1, cap-wt[i])`)
 
@@ -39,8 +39,8 @@ int knapsack01(vector<int>& wt, vector<int>& val, int cap) {
 ```
 
 ## 1D space-optimized
-- **0/1:** loop `cap` descending — each item used once. See [[Partition Equal Subset Sum]].
-- **Unbounded:** loop `cap` ascending — same item reusable.
+- **0/1:** loop `cap` descending: each item used once. See [[Partition Equal Subset Sum]].
+- **Unbounded:** loop `cap` ascending: same item reusable.
 
 ```cpp
 // 0/1 subset sum
@@ -56,11 +56,11 @@ for (int coin : coins)
 ```
 
 ## Variants
-- Subset Sum / Partition Equal Subset Sum — some subset hits a target
+- Subset Sum / Partition Equal Subset Sum: some subset hits a target
 - Count of Subsets with Given Sum
 - Minimum Subset Sum Difference
 - Target Sum (+/- to reach a value)
-- Coin Change — min coins / count ways (Unbounded)
+- Coin Change: min coins / count ways (Unbounded)
 - Rod Cutting (Unbounded)
 
 ## Playlist (Aditya Verma)
@@ -77,13 +77,23 @@ Only video 1 has captions, rest unverified against transcript.
 9. [Target Sum](https://www.youtube.com/watch?v=Hw6Ygp3JBYw)
 10. [Unbounded Knapsack](https://www.youtube.com/watch?v=aycn9KO8_Ls)
 11. [Rod Cutting](https://www.youtube.com/watch?v=SZqAQLjDsag)
-12. [Coin Change — Max Ways](https://www.youtube.com/watch?v=I4UR2T6Ro3w)
-13. [Coin Change — Min Coins](https://www.youtube.com/watch?v=I-l6PBeERuc)
+12. [Coin Change: Max Ways](https://www.youtube.com/watch?v=I4UR2T6Ro3w)
+13. [Coin Change: Min Coins](https://www.youtube.com/watch?v=I-l6PBeERuc)
 
 ## Problems
-```dataview
-table difficulty, source, star
-from "notes/Problems"
-where contains(topics, "Dynamic Programming") and regexmatch("knapsack|subset|partition|coin change|target sum|rod cutting", lower(file.name))
-sort difficulty asc, file.name asc
+```base
+filters:
+  and:
+    - file.inFolder("notes/Problems")
+    - file.hasLink(this.file)
+views:
+  - type: table
+    name: Problems
+    order:
+      - file.name
+      - insight
+      - time
+      - difficulty
+      - star
+      - mastery
 ```

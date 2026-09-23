@@ -42,9 +42,19 @@ vector<vector<int>> build2D(vector<vector<int>>& mat) {
 
 ## Problems
 
-```dataview
-table difficulty, source, star
-from "notes/Problems"
-where contains(topics, "Prefix Sum")
-sort difficulty asc, file.name asc
+```base
+filters:
+  and:
+    - file.inFolder("notes/Problems")
+    - file.hasLink(this.file)
+views:
+  - type: table
+    name: Problems
+    order:
+      - file.name
+      - insight
+      - time
+      - difficulty
+      - star
+      - mastery
 ```

@@ -1,11 +1,7 @@
 ---
-difficulty: Easy
-topics: ["Sorting"]
-source: Standard
-star: false
+type: reference
+topic: Merge Sort
 ---
-
-[[Sorting]]
 
 ```cpp
 class Solution {
@@ -37,7 +33,6 @@ class Solution {
         delete[] temp;
     }
 
-  
     void mergeSort(vector<int>& arr, int l, int r) {
         // code here
         if(l >= r)

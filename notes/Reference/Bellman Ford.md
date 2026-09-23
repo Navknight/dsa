@@ -31,12 +31,3 @@ vector<int> bellmanFord(int src, vector<tuple<int,int,int>>& edges, int n) {
     return dist;
 }
 ```
-
-## Problems
-
-```dataview
-table difficulty, source, star
-from "notes/Problems"
-where contains(topics, "Bellman Ford")
-sort difficulty asc, file.name asc
-```

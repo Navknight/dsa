@@ -1,0 +1,77 @@
+filters:
+  and:
+    - file.inFolder("notes/Problems")
+    - file.ext == "md"
+formulas:
+  url: if(note.link, link(note.link, "open"), "")
+properties:
+  file.name:
+    displayName: Problem
+  formula.url:
+    displayName: Link
+views:
+  - type: table
+    name: All
+    order:
+      - formula.url
+      - file.name
+      - insight
+      - time
+      - space
+      - difficulty
+      - topics
+      - star
+      - blind75
+      - mastery
+      - review
+    sort:
+      - property: file.name
+        direction: DESC
+      - property: star
+        direction: DESC
+      - property: difficulty
+        direction: ASC
+    columnSize:
+      file.name: 209
+      note.insight: 597
+      note.time: 105
+  - type: table
+    name: Due
+    filters:
+      and:
+        - review <= today()
+    order:
+      - file.name
+      - formula.url
+      - insight
+      - mastery
+      - review
+    sort:
+      - property: review
+        direction: ASC
+  - type: table
+    name: Weak
+    filters:
+      or:
+        - mastery == "red"
+        - mastery == "yellow"
+    order:
+      - file.name
+      - formula.url
+      - insight
+      - mastery
+      - review
+  - type: table
+    name: Starred
+    filters:
+      and:
+        - star == true
+    order:
+      - file.name
+      - formula.url
+      - insight
+      - time
+      - difficulty
+      - topics
+      - mastery
+      - review

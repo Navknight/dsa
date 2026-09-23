@@ -29,7 +29,7 @@ bool hasCycle(int u, vector<vector<int>>& adj, vector<int>& color) {
 }
 
 // Undirected graph cycle detection (DSU)
-// Use DSU::unite — returns false if already connected (cycle)
+// Use DSU::unite: returns false if already connected (cycle)
 
 // Floyd's cycle detection (linked list)
 bool hasCycle(ListNode* head) {
@@ -41,13 +41,4 @@ bool hasCycle(ListNode* head) {
     }
     return false;
 }
-```
-
-## Problems
-
-```dataview
-table difficulty, source, star
-from "notes/Problems"
-where contains(topics, "Cycle Detection")
-sort difficulty asc, file.name asc
 ```

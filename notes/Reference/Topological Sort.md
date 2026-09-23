@@ -44,9 +44,19 @@ void dfsTopo(int u, vector<vector<int>>& adj, vector<bool>& vis, stack<int>& st)
 
 ## Problems
 
-```dataview
-table difficulty, source, star
-from "notes/Problems"
-where contains(topics, "Topological Sort")
-sort difficulty asc, file.name asc
+```base
+filters:
+  and:
+    - file.inFolder("notes/Problems")
+    - file.hasLink(this.file)
+views:
+  - type: table
+    name: Problems
+    order:
+      - file.name
+      - insight
+      - time
+      - difficulty
+      - star
+      - mastery
 ```

@@ -1,12 +1,7 @@
 ---
-difficulty: Easy
-topics: ["Math"]
-source: GFG
-star: false
-link: "https://www.geeksforgeeks.org/problems/prime-number2314/1"
+type: reference
+topic: Prime Number
 ---
-
-[[Math]]
 
 ```cpp
 bool isPrime(int n) {

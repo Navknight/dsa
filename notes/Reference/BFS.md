@@ -5,7 +5,7 @@ topic: BFS
 
 # BFS
 
-Breadth-First Search — explores level by level. Guarantees shortest path in unweighted graphs.
+Breadth-First Search: explores level by level. Guarantees shortest path in unweighted graphs.
 
 ## When to Use
 
@@ -37,9 +37,19 @@ void bfs(int start, vector<vector<int>>& adj, int n) {
 
 ## Problems
 
-```dataview
-table difficulty, source, star
-from "notes/Problems"
-where contains(topics, "BFS")
-sort difficulty asc, file.name asc
+```base
+filters:
+  and:
+    - file.inFolder("notes/Problems")
+    - file.hasLink(this.file)
+views:
+  - type: table
+    name: Problems
+    order:
+      - file.name
+      - insight
+      - time
+      - difficulty
+      - star
+      - mastery
 ```

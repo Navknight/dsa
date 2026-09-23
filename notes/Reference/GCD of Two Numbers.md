@@ -1,12 +1,7 @@
 ---
-difficulty: Easy
-topics: ["Math"]
-source: GFG
-star: true
-link: "https://www.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1"
+type: reference
+topic: GCD of Two Numbers
 ---
-
-[[Math]]
 
 ```cpp
 int gcd(int a, int b) {
