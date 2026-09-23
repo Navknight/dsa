@@ -11,13 +11,15 @@
             "id": "2fe5b5ae466cdbeb",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "split-diff-view",
               "state": {
-                "file": "notes/Problems.base",
-                "viewName": "All"
+                "aFile": "CLAUDE.md",
+                "bFile": "CLAUDE.md",
+                "aRef": "HEAD",
+                "bRef": ""
               },
-              "icon": "lucide-table",
-              "title": "Problems"
+              "icon": "diff",
+              "title": "Diff: CLAUDE  (Index)"
             }
           }
         ]
@@ -82,7 +84,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7910084a05befc22",
@@ -198,8 +201,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ec891d4e6df5ed58",
+  "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
+    "notes/Problems.base",
     "notes/Problems/Young Physicist.md",
     "notes/Problems/String Task.md",
     "notes/Problems/Way Too Long Words.md",
@@ -211,7 +215,6 @@
     "sedAf5spJ",
     "notes/Templates/Topic.md",
     "notes/Reference/Graphs.md",
-    "notes/Problems.base",
     "notes/Reference/Deque.md",
     "notes/Reference/Recursion.md",
     "notes/Reference/Math.md",
@@ -227,7 +230,6 @@
     "notes/Reference/Stack.md",
     "notes/Reference/Binary Search.md",
     "notes/Reference/Linked Lists.md",
-    "notes/Reference/Trees.md",
     "notes/Problems/sedWphNll",
     "notes/Templates",
     "notes/CP-Roadmap.pdf",
