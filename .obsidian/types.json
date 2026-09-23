@@ -14,6 +14,8 @@
     "difficulty": "text",
     "topics": "multitext",
     "source": "text",
-    "blind75": "checkbox"
+    "blind75": "checkbox",
+    "rating": "number",
+    "contest": "text"
   }
 }

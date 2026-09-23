@@ -198,8 +198,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2fe5b5ae466cdbeb",
+  "active": "ec891d4e6df5ed58",
   "lastOpenFiles": [
+    "notes/Problems/Young Physicist.md",
+    "notes/Problems/String Task.md",
+    "notes/Problems/Way Too Long Words.md",
+    "notes/Templates/CF Problem.md",
+    "notes/Reference/Number Theory.md",
+    "notes/Reference/Brute Force.md",
+    "notes/Reference/Implementation.md",
+    "notes/Reference/Constructive.md",
     "sedAf5spJ",
     "notes/Templates/Topic.md",
     "notes/Reference/Graphs.md",
@@ -220,21 +228,13 @@
     "notes/Reference/Binary Search.md",
     "notes/Reference/Linked Lists.md",
     "notes/Reference/Trees.md",
-    "notes/Reference/Dynamic Programming.md",
-    "notes/Reference/Arrays.md",
-    "notes/Problems/Topological Sort (DFS).md",
-    "notes/Problems/Disjoint set (Union-Find).md",
-    "notes/Problems/Untitled.md",
     "notes/Problems/sedWphNll",
-    "notes/Problems/Shortest Common Supersequence.md",
-    "notes/Problems/Rod Cutting.md",
     "notes/Templates",
     "notes/CP-Roadmap.pdf",
     "Untitled.base",
     "notes/Problems/Graphs/Network Delay Time.md.tmp.56078.c805d4efcb16",
     "notes/Problems/Graphs/Network Delay Time.md.tmp.56078.82fb6cb54ed3",
     "notes/Reference/Knapsack.md.tmp.99810.7589dc31856d",
-    "notes/Reference/Knapsack.md.tmp.99810.45e8c7069f20",
-    "notes/Reference/Knapsack.md.tmp.99810.d31c52b52a26"
+    "notes/Reference/Knapsack.md.tmp.99810.45e8c7069f20"
   ]
 }

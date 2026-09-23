@@ -19,6 +19,7 @@ views:
       - time
       - space
       - difficulty
+      - rating
       - topics
       - star
       - blind75
@@ -75,3 +76,20 @@ views:
       - topics
       - mastery
       - review
+  - type: table
+    name: CodeForces
+    filters:
+      and:
+        - source == "CodeForces"
+    order:
+      - file.name
+      - formula.url
+      - rating
+      - contest
+      - insight
+      - topics
+      - mastery
+      - review
+    sort:
+      - property: rating
+        direction: ASC

@@ -13,8 +13,8 @@ This repo is an Obsidian vault at `notes/`. Key paths:
 - `notes/Problems/` — flat folder, one note per problem (~250 LeetCode/GFG). No code lives outside the notes
 - `notes/Problems.base` — the main table (Obsidian Bases). Views: All, Starred, Due (`review <= today`), Weak (`mastery` red/yellow)
 - `notes/Reference/` — cheat sheets (Dijkstra.md, BFS.md, Knapsack.md...) and topic hubs (Graphs.md, Trees.md...). Every name in the taxonomy below is a note here. Each hub embeds a table of the problems that link to it
-- `notes/Templates/Problem.md`, `notes/Templates/Topic.md` — templates
-- CodeForces notes are paused while CF is being redone. Don't write CF notes unless asked
+- `notes/Templates/Problem.md`, `notes/Templates/CF Problem.md`, `notes/Templates/Topic.md` — templates
+- `CodeForces/` — CF solutions as real `.cpp` files (they get compiled and stress-tested). LeetCode/GFG code lives in the note instead
 
 **Problem note format:** body is optional, a note can be just the frontmatter row.
 ```yaml
@@ -49,6 +49,33 @@ date: YYYY-MM-DD
 ### Complexity
 - Time: $O(...)$
 - Space: $O(...)$
+```
+
+**CodeForces note format:** same folder and table, `source: CodeForces`, with `rating` and `contest` in place of `difficulty`, and `code` linking the `.cpp`. The observation is the note, code stays in the file.
+```yaml
+---
+link: https://codeforces.com/problemset/problem/<contest>/<letter>
+rating: 1200            # CF rating, difficulty stays empty
+contest: Div 2 Round 918
+topics:
+  - "[[Greedy]]"
+source: CodeForces
+star: false
+blind75: false
+mastery:
+review:
+insight: "the one observation the problem turns on"
+time: "O(n log n)"
+space: "O(1)"
+date: YYYY-MM-DD
+code: "[[CodeForces/A_Problem_Name.cpp]]"
+---
+
+# Problem
+<one line>
+
+# Observation
+<why it works, the proof sketch, the trap that cost a WA>
 ```
 
 **Reference note format** (cheat sheet; a topic hub is the same minus When to Use / Template, plus a `Related: [[...]]` line):
@@ -89,7 +116,7 @@ User's primary language: **C++** (competitive style: `#include "bits/stdc++.h"`,
 1. **No free solutions** — guide through questions and hints first
 2. **Pattern over problem** — always name the pattern, link to existing Reference note if one exists
 3. **Vault-aware** — when relevant, read actual files from `notes/Reference/` or `notes/Problems/` to give personalized answers
-4. **CF vs LC awareness** — CF requires observation→proof→code thinking; LC requires pattern recognition + interview communication
+4. **CF vs LC awareness** — CF requires observation→proof→code thinking; LC requires pattern recognition + interview communication. CF notes record the observation, not the code
 5. **Complexity always** — never omit time/space analysis
 
 ## Mode Detection
@@ -152,6 +179,15 @@ Write the note straight to `notes/Problems/<Problem Title>.md` (the official pro
 7. Body is terse, in the user's voice: one-line problem, 1-3 lines per approach, their code, complexity, traps / "Mistakes I made" as bullets. No em-dashes, no filler. The user's own code, not a rewritten one; note bugs in a line instead of fixing them silently
 8. A trivial problem can be frontmatter only
 
+**CodeForces notes:** use the CF frontmatter above and `notes/Templates/CF Problem.md`.
+- Write one for rating 1200 and up, or for anything below that which cost a WA or a long think. A two-minute 800 doesn't need a note
+- `# Observation` replaces `# Approach`: what property makes the problem tractable, why it holds, and the trap (overflow, off-by-one, the case the samples don't cover). No `### Code` section, the `.cpp` is linked
+- Name the note after the CF problem title, name the file `CodeForces/<Letter>_<Problem_Name>.cpp`
+- Tags map onto the taxonomy: constructive → `[[Constructive]]`, implementation → `[[Implementation]]`, brute force → `[[Brute Force]]`, number theory → `[[Number Theory]]`, dp → `[[Dynamic Programming]]`, graphs → `[[Graphs]]`, greedy → `[[Greedy]]`, math → `[[Math]]`, sortings → `[[Sorting]]`, strings → `[[Strings]]`, two pointers → `[[Two Pointers]]`, binary search → `[[Binary Search]]`
+- Never put a CF rating in `difficulty`, or a LeetCode difficulty in `rating`. The CodeForces view in the table sorts on `rating`
+
+CF revision differs from LC: re-solving an 800 teaches nothing. For CF, revise the observation, "what made this work?", and only re-implement when the implementation itself was the hard part.
+
 ### REVISE MODE
 **Trigger:** "what's due", "revise", "revision", "what should I re-solve", "I re-solved X"
 
@@ -210,7 +246,8 @@ Competitive programming mindset:
 2. **Simplify** — reduce to a known problem or simpler subproblem
 3. **Prove** — verify the observation handles all cases (don't just "seems right")
 4. **Implement** — clean C++ with fast I/O, correct data types (long long when needed)
-5. **Stress test** — suggest a brute force + random testing approach
+5. **Stress test** — write a brute force plus a random generator, diff them in a loop until they disagree
+6. **Note it** — after an accepted solution, offer to write the CF note (rating 1200+, or lower if it was hard). One line: the observation. That line is what makes it re-solvable
 
 Focus: building the mathematical intuition, not just coding.
 
@@ -235,6 +272,8 @@ Always mention when you've read a vault file: "I checked your Dijkstra.md note..
 ## Topic Taxonomy (use exactly these names in generated notes)
 
 Arrays, Graphs, Dynamic Programming, Trees, Linked Lists, Binary Search, Stack, Heap, Hash Maps, Two Pointers, Sliding Window, Backtracking, Greedy, Sorting, Strings, Bit Manipulation, Math, Recursion, Deque, Dijkstra, BFS, DFS, Disjoint Set Union, Topological Sort, Tries, Monotonic Stack, Prefix Sum
+
+CF-only topics: Constructive, Implementation, Brute Force, Number Theory.
 
 Written as `"[[Name]]"` in `topics`. A new topic needs a hub note in `notes/Reference/` from `notes/Templates/Topic.md`, and the taxonomy in CLAUDE.md updated
 

@@ -9,12 +9,12 @@ Obsidian DSA vault (`notes/`) plus CodeForces solutions. LeetCode/GFG code lives
 ## Repo Layout
 
 ```
-CodeForces/       CF solutions (being redone) — named <Round>_<ProblemName>.cpp
+CodeForces/       CF solutions — named <Letter>_<Problem_Name>.cpp. CF code stays in files, LC/GFG code lives in the notes
 notes/
   Problems/           Flat, one note per problem. Topics only in the `topics` property
-  Problems.base       Main table (Obsidian Bases): All, Starred, Due, Weak views
+  Problems.base       Main table (Obsidian Bases): All, Starred, Due, Weak, CodeForces views
   Reference/          Cheat sheets + topic hubs. Problems link to hubs via `topics`, each hub lists its backlinks
-  Templates/          Problem.md and Topic.md (hub) templates
+  Templates/          Problem.md, CF Problem.md and Topic.md (hub) templates
 ```
 
 ## C++ Style
@@ -78,10 +78,14 @@ date: YYYY-MM-DD
 - `insight` is one line: the idea you'd need to re-solve it.
 - Notes are terse: one-line problem, 1-3 lines per approach, code, complexity, traps as bullets.
 
+CodeForces notes live in the same folder with `source: CodeForces`, `rating` + `contest` instead of `difficulty`, `code` linking the `.cpp`, and a `# Observation` section instead of `# Approach`. Template: `notes/Templates/CF Problem.md`. Write one from rating 1200 up, or lower if the problem cost a WA.
+
 ### Topic Taxonomy
 
 Use **exactly** these names in `topics:` arrays, as quoted links (`"[[Graphs]]"`). Each one is a note in `notes/Reference/`. DSU is `"[[Disjoint Set Union]]"`:
 `Arrays`, `Graphs`, `Dynamic Programming`, `Trees`, `Linked Lists`, `Binary Search`, `Stack`, `Heap`, `Hash Maps`, `Two Pointers`, `Sliding Window`, `Backtracking`, `Greedy`, `Sorting`, `Strings`, `Bit Manipulation`, `Math`, `Recursion`, `Deque`, `Dijkstra`, `BFS`, `DFS`, `DSU`, `Topological Sort`, `Tries`, `Monotonic Stack`, `Prefix Sum`
+
+CF-only: `Constructive`, `Implementation`, `Brute Force`, `Number Theory`
 
 ### Reference Note Format
 
@@ -109,7 +113,7 @@ views:
 
 Vault root is the repo root (`.obsidian/` at top level). Plugins: core Bases, Properties and Templates, plus obsidian-git. No Dataview, Templater or Tasks.
 
-CodeForces notes are removed while CF is being redone. `CodeForces/` holds only the new solutions.
+`CodeForces/` holds the new solutions. Compiled binaries (`a.out`, `*.exe`) are gitignored.
 
 ## DSA Sensei Skill
 
