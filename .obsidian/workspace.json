@@ -11,15 +11,13 @@
             "id": "2fe5b5ae466cdbeb",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "bases",
               "state": {
-                "aFile": "CLAUDE.md",
-                "bFile": "CLAUDE.md",
-                "aRef": "HEAD",
-                "bRef": ""
+                "file": "notes/Problems.base",
+                "viewName": "All"
               },
-              "icon": "diff",
-              "title": "Diff: CLAUDE  (Index)"
+              "icon": "lucide-table",
+              "title": "Problems"
             }
           }
         ]
@@ -84,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7910084a05befc22",
@@ -203,7 +200,14 @@
   },
   "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
+    "notes/Problems/Little Girl and Maximum Sum.md",
+    "notes/Problems/Little Girl and Maximum Sum.md.tmp.29054.b3707210fa4e",
+    "CodeForces/C_Little_Girl_and_Maximum_Sum.bin",
+    "CodeForces/C_Little_Girl_and_Maximum_Sum.cpp.tmp.29054.a60e6427fdec",
     "notes/Problems.base",
+    "notes/Problems/Boredom.md",
+    "CodeForces/C_Little_Girl_and_Maximum_Sum.cpp",
+    "README.md",
     "notes/Problems/Young Physicist.md",
     "notes/Problems/String Task.md",
     "notes/Problems/Way Too Long Words.md",
@@ -227,16 +231,9 @@
     "notes/Reference/Two Pointers.md",
     "notes/Reference/Hash Maps.md",
     "notes/Reference/Heap.md",
-    "notes/Reference/Stack.md",
-    "notes/Reference/Binary Search.md",
-    "notes/Reference/Linked Lists.md",
     "notes/Problems/sedWphNll",
     "notes/Templates",
     "notes/CP-Roadmap.pdf",
-    "Untitled.base",
-    "notes/Problems/Graphs/Network Delay Time.md.tmp.56078.c805d4efcb16",
-    "notes/Problems/Graphs/Network Delay Time.md.tmp.56078.82fb6cb54ed3",
-    "notes/Reference/Knapsack.md.tmp.99810.7589dc31856d",
-    "notes/Reference/Knapsack.md.tmp.99810.45e8c7069f20"
+    "Untitled.base"
   ]
 }
