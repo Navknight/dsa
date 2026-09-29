@@ -2,7 +2,6 @@
 type: reference
 topic: Bellman Ford
 ---
-
 # Bellman Ford
 
 Single-source shortest path. O(VE). Handles negative edges. Detects negative cycles.

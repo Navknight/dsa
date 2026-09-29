@@ -11,13 +11,14 @@
             "id": "2fe5b5ae466cdbeb",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "notes/Problems.base",
-                "viewName": "All"
+                "file": "notes/Reference/Dynamic Programming.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Problems"
+              "icon": "lucide-file",
+              "title": "Dynamic Programming"
             }
           }
         ]
@@ -82,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7910084a05befc22",
@@ -200,11 +202,16 @@
   },
   "active": "2fe5b5ae466cdbeb",
   "lastOpenFiles": [
+    "notes/Reference/Eulerian Path.md",
+    "notes/Reference/Arrays.md",
+    "notes/Reference/Untitled.md",
+    "notes/Reference/Bellman Ford.md",
+    "notes/Reference/Backtracking.md",
+    "notes/Problems.base",
     "notes/Problems/Little Girl and Maximum Sum.md",
     "notes/Problems/Little Girl and Maximum Sum.md.tmp.29054.b3707210fa4e",
     "CodeForces/C_Little_Girl_and_Maximum_Sum.bin",
     "CodeForces/C_Little_Girl_and_Maximum_Sum.cpp.tmp.29054.a60e6427fdec",
-    "notes/Problems.base",
     "notes/Problems/Boredom.md",
     "CodeForces/C_Little_Girl_and_Maximum_Sum.cpp",
     "README.md",
@@ -226,11 +233,7 @@
     "notes/Reference/Strings.md",
     "notes/Reference/Sorting.md",
     "notes/Reference/Greedy.md",
-    "notes/Reference/Backtracking.md",
     "notes/Reference/Sliding Window.md",
-    "notes/Reference/Two Pointers.md",
-    "notes/Reference/Hash Maps.md",
-    "notes/Reference/Heap.md",
     "notes/Problems/sedWphNll",
     "notes/Templates",
     "notes/CP-Roadmap.pdf",

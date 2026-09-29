@@ -2,7 +2,6 @@
 type: reference
 topic: Backtracking
 ---
-
 # Backtracking
 
 Choose, recurse, unchoose. Prune early.
