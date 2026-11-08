@@ -6,12 +6,12 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: red
+review: 2026-11-09
 insight: "one half is always sorted, check if target lies in it"
 time: "O(log n)"
 space: "O(1)"
-date: 
+date: 2026-11-08
 ---
 
 # Problem
@@ -20,6 +20,18 @@ Search a target in a rotated sorted array.
 # Approach
 ## Binary Search
 One half around `m` is always sorted. If the target is in the sorted half's range, search there, else the other half. See [[Find Minimum in Rotated Sorted Array]].
+
+- Sorted-half branch needs both ends: `nums[l] <= target < nums[m]` or `nums[m] < target <= nums[r]`
+- `nums[l] <= nums[m]`, not `<`. One-element left half is still sorted
+- Duplicates break the sorted-half test, see Search in Rotated Sorted Array II
+- Two-pass option: find pivot (`nums[m] < nums[r] ? r = m : l = m + 1`), then binary search both runs. Same $O(\log n)$
+
+### Mistakes
+- Compared indices instead of values (`m < l`). Compare `nums[m]` with `nums[r]`
+- Early exit "smaller than both ends" is wrong, the minimum can sit between `m` and `r`
+- `l = m` never moves when `m == l`, infinite loop. Use `l = m + 1` or `r = m`
+- Pivot loop must be `l < r`. With `l <= r` it overshoots to `pivot + 1`, and `[1]` reads out of bounds
+- Checked only `nums[m]` against the target in the sorted-half branch and threw away the half with the target
 
 ### Code
 ```cpp

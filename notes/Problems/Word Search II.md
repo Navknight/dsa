@@ -8,10 +8,10 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "trie of words, DFS board walking the trie, clear node->word once found"
-time: "O(M * N * 4^L)"
+time: "O(M * N * 3^L)"
 space: "O(W * L)"
 date: 2026-07-01
 ---
@@ -109,4 +109,48 @@ vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
 
 ### Complexity
 - Time: same, faster in practice
+- Space: $O(W \cdot L)$
+
+## Re-solve: Trie + DFS with a visited array
+Same idea, `visited` instead of marking the board. Word stored at the end node, cleared when found. After the 4 calls, if the node has no word and no children, cut it from its parent (`parent->next[c] = nullptr`).
+
+- Not multi-source BFS. Visited depends on the path, BFS can't carry it
+- DFS per word works for Word Search I, here it redoes shared prefixes. W * M*N*4^L
+- A cell can belong to several words. Visited is per path, so unmark on the way back or you lose words
+- Check the dead node after the recursion, children get cut first
+- Per start cell the paths are 4 * 3^(L-1), not 4^L, you can't step back
+
+### Mistakes
+- Forgot to unmark `visited` after the branch, siblings saw used cells
+- Built `visited` inside the cell loop, O((M*N)^2) wasted. One copy is enough once the backtrack is right
+- `bool done` can't return the word. Store the string at the end node
+- Pruned `parent` instead of `node`, and `parent = nullptr` only changes the local
+
+### Code
+```cpp
+struct TrieNode {
+    string word;
+    vector<TrieNode*> next = vector<TrieNode*>(26, nullptr);
+};
+// search(board, node, visited, ans, i, j)
+if (!node->next[board[i][j] - 'a']) return;
+visited[i][j] = true;
+TrieNode* parent = node;
+node = node->next[board[i][j] - 'a'];
+if (node->word != "") { ans.push_back(node->word); node->word = ""; }
+for (int d = 0; d < 4; d++) {
+    int nx = i + dx[d], ny = j + dy[d];
+    if (nx >= 0 && nx < board.size() && ny >= 0 && ny < board[0].size() && !visited[nx][ny])
+        search(board, node, visited, ans, nx, ny);
+}
+visited[i][j] = false;
+if (node->word == "") {
+    bool none = true;
+    for (auto& t : node->next) if (t) { none = false; break; }
+    if (none) parent->next[board[i][j] - 'a'] = nullptr;
+}
+```
+
+### Complexity
+- Time: $O(W \cdot L + M \cdot N \cdot 3^L)$
 - Space: $O(W \cdot L)$

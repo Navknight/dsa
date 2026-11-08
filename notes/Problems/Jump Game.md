@@ -7,8 +7,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "track farthest reachable, fail if i > farthest"
 time: "O(n)"
 space: "O(1)"
@@ -73,3 +73,10 @@ public:
 ### Complexity
 - Time: $O(n)$
 - Space: $O(1)$
+
+- Check `i > reach` before using `nums[i]`
+- `end` and `farthest` were the same variable, one `reach` is enough
+- Backward version: `goal = n - 1`, `goal = i` when `i + nums[i] >= goal`, answer is `goal == 0`
+
+### Mistakes
+- Missed the reachability check. `[3,2,1,0,4]` returned true because index 4 extended the reach

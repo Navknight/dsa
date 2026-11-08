@@ -8,8 +8,8 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "return -1 from height if a subtree is unbalanced, check both in one DFS"
 time: "O(n)"
 space: "O(h)"
@@ -54,6 +54,14 @@ bool isBalanced(TreeNode* root) {
 
 ## Sentinel (-1)
 Return -1 for an unbalanced subtree. Stops early.
+
+- `height(root) != -1` is the whole answer
+
+### Mistakes
+- First try was top-down, `height()` at every node. O(n²) on a skewed tree
+- Forgot to return the child's -1 up. abs(-1 - 0) is 1, so it looked balanced
+- Last line called `height()` again instead of using `l` and `r`. 3 calls per child, exponential on a deep chain
+- `isBalanced` checked `height(child) > 0`. Null child is 0, so `[1]` came out unbalanced
 
 ### Code
 ```cpp

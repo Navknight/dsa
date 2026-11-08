@@ -7,8 +7,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: green
+review: 2026-11-15
 insight: "ways(i) = ways(i-1) + ways(i-2), keep only the last two"
 time: "O(n)"
 space: "O(1)"
@@ -114,3 +114,7 @@ public:
 ### Complexity
 - Time: $O(n)$
 - Space: $O(1)$
+
+- Seed `prev = 1`, `curr = 1` (steps 0 and 1) and the `n == 1`, `n == 2` cases disappear
+- Counting from the top (`ways(i) = ways(i+1) + ways(i+2)`) gives the same number by symmetry
+- n is at most 45, the answer overflows int after 46

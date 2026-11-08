@@ -7,8 +7,8 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "map old -> new. pass 1 create copies, pass 2 wire next and random through the map"
 time: "O(n)"
 space: "O(n)"
@@ -70,3 +70,10 @@ Node* copyRandomList(Node* head) {
 ### Complexity
 - Time: $O(n)$
 - Space: $O(n)$
+
+- Map old node to its copy, two passes. A random pointer can point forward, so every copy has to exist before wiring
+- Null `random`: seed `mp[nullptr] = nullptr` or check before the lookup
+- O(1) space: weave copies in (`A A' B B'`), `A'->random = A->random->next`, then split and restore the original
+
+### Mistakes
+- Loop was `while (ptr->next)`, it skipped the last node and crashed on an empty list. Use `while (ptr)`

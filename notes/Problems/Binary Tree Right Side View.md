@@ -7,8 +7,8 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: green
+review: 2026-11-15
 insight: "level-order BFS, take the last node of each level (n == 0 after decrement)"
 time: "O(n)"
 space: "O(n)"
@@ -47,3 +47,8 @@ vector<int> rightSideView(TreeNode* root) {
 ### Complexity
 - Time: $O(n)$
 - Space: $O(n)$
+
+- Level order, take the last node of each level
+- Push only real children, then `k == len - 1` marks the rightmost. Pushing nulls works but doubles the queue
+- DFS: visit right first, push when `depth == ans.size()`. Space O(h) against O(w) for BFS
+- The visible node can be a left child when the right side is shorter, `[1,2,null,3]` is `[1,2,3]`

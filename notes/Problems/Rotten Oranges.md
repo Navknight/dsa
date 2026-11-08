@@ -8,12 +8,12 @@ topics:
 source: Standard
 star: false
 blind75: false
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "multi-source BFS from all rotten oranges, levels are minutes, -1 if any fresh is left"
 time: "O(m * n)"
 space: "O(m * n)"
-date: 
+date: 2026-11-08
 ---
 
 # Problem
@@ -76,3 +76,10 @@ int orangesRotting(vector<vector<int>>& grid) {
 ### Complexity
 - Time: $O(m \cdot n)$
 - Space: $O(m \cdot n)$
+
+- `[[2]]` must return 0, `[[1]]` must return -1, `[[0]]` must return 0
+- Count fresh up front, `fresh == 0` at the end is the -1 check
+
+### Mistakes
+- Loop ran one extra empty level, `time` was 1 too high. Loop on `!q.empty() && fresh`
+- Mark a fruit rotten when it is pushed, not when popped, or it is pushed twice

@@ -8,8 +8,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "dp[j] += dp[j-1] row by row, or C(m+n-2, m-1)"
 time: "O(min(m,n))"
 space: "O(1)"
@@ -79,6 +79,13 @@ public:
 
 ## 1D Rolling
 `dp[j] += dp[j-1]`. Still works with obstacles, unlike the formula.
+
+- Every path has `m-1` downs and `n-1` rights. Equal only on a square grid
+- "Permutations" overcounts, the `D`s and `R`s are identical. Choose which of the `m+n-2` steps are downs: `C(m+n-2, m-1)`
+- Backwards version: start `dp` as all `1` (last row), then `dp[j] += dp[j+1]` from `j = n-2` down. No new vector per row
+
+### Mistakes
+- Seeded the row below with `1` but `if (i + 1 < m)` never read it. Result was 0 for every input
 
 ### Code
 ```cpp

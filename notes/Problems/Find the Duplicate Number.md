@@ -9,8 +9,8 @@ topics:
 source: Leetcode
 star: true
 blind75: false
-mastery:
-review:
+mastery: red
+review: 2026-11-09
 insight: "value as pointer to index makes a cycle, Floyd's entry point is the duplicate"
 time: "O(n)"
 space: "O(1)"
@@ -88,3 +88,12 @@ int findDuplicate(vector<int>& nums) {
 ### Complexity
 - Time: $O(n \log n)$
 - Space: $O(1)$
+
+- Floyd: treat `i -> nums[i]` as a linked list, 0 is outside the cycle, the cycle entry is the duplicate
+- Take the first step before the loop, `slow` and `fast` start equal
+- Phase 2: reset `slow` to 0, move both one step. Moving `fast` two steps breaks it
+- Trace `[1,3,4,2,2]`: phase 1 meets at 4, phase 2 meets at 2
+- Alternative: binary search on the value, count entries <= mid, O(n log n)
+
+### Mistakes
+- First try was a count array, breaks the O(1) space rule. Sorting or negating also modifies the array

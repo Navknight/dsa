@@ -8,8 +8,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "reverse the flow, DFS uphill from each ocean's border, answer = cells reached by both"
 time: "O(r * c)"
 space: "O(r * c)"
@@ -146,3 +146,11 @@ public:
 ### Complexity
 - Time: $O(rc)$
 - Space: $O(rc)$
+
+- Search from each ocean's border uphill, not forward from every cell (O((m*n)^2))
+- Step to a neighbour when `h[nx][ny] >= h[i][j]`, the reverse of the flow rule
+- Corners touch both oceans and get seeded by both passes, no special case
+- Answer: cells true in both grids. BFS from the border avoids deep recursion
+
+### Mistakes
+- Passed the visited grid by value. The DFS marked a copy and the answer was empty. Pass by reference

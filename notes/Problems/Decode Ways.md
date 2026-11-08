@@ -7,8 +7,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: red
+review: 2026-11-09
 insight: "ways(i) = ways(i+1) if s[i] != '0' + ways(i+2) if 10..26. base ways(n) = 1"
 time: "O(n)"
 space: "O(1)"
@@ -127,3 +127,13 @@ public:
 ### Complexity
 - Time: $O(n)$
 - Space: $O(1)$
+
+- A `'0'` digit has 0 ways. Do not copy `dp[i+1]` into it
+- Two digits need 10..26. Skipping the `'0'` start already gives the lower bound
+- `dp(n + 1)` with `dp[n] = 1` removes the last-char special case and the `i + 2 < n` guard
+- Tests: `226` is 3, `10` is 1, `100` is 0, `2101` is 1, `1111` is 5
+- O(1) space: `next`, `next2`, shift before overwrite
+
+### Mistakes
+- Read `dp` where I meant `s`. `dp[i] != '0'` instead of `s[i] != '0'`
+- Counting DP adds `dp` values, never a `+ 1` constant. The `+ 1` only works near the end of the string

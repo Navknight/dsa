@@ -6,8 +6,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: green
+review: 2026-11-15
 insight: "sorted word as the map key"
 time: "O(n * k log k)"
 space: "O(n * k)"
@@ -43,3 +43,8 @@ vector<vector<string>> groupAnagrams(vector<string>& strs) {
 ### Complexity
 - Time: $O(n \cdot k \log k)$
 - Space: $O(n \cdot k)$
+
+- Sort each word, use it as the map key. A DSU is not needed, the map already groups
+- Counting key beats sorting for long words: 26 counts as a string, O(n * k)
+- Put a delimiter between counts (`1#0#...`), without it `{1, 11}` and `{11, 1}` collide
+- `move(it.second)` into the answer, `map` as a variable name shadows the type

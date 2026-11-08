@@ -8,12 +8,12 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "dummy head, move first n+1 ahead, move both until first is null, second is before the target"
 time: "O(n)"
 space: "O(1)"
-date: 
+date: 2026-11-08
 ---
 
 # Problem
@@ -78,3 +78,12 @@ ListNode* removeNthFromEnd(ListNode* head, int n) {
 ### Complexity
 - Time: $O(n)$
 - Space: $O(1)$
+
+- Both pointers on the dummy, move `fast` n times, then move both while `fast->next`
+- Keep a separate pointer to the dummy, `slow` walks and the dummy is lost otherwise
+- Use `ListNode dummy(0, head)` on the stack, `new` leaks
+- Tests: `[1,2,3,4,5]` n=2, `[1]` n=1 gives empty, `[1,2]` n=2 gives `[2]`
+
+### Mistakes
+- Gap was off by one. `slow` must end on the node before the target
+- `return head` is wrong when the head is removed. Return `dummy->next`

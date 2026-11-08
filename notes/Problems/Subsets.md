@@ -7,10 +7,10 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "at each index skip or take, push at the end"
-time: "O(2^n)"
+time: "O(n * 2^n)"
 space: "O(2^n)"
 date: 2026-06-30
 ---
@@ -23,6 +23,14 @@ All subsets of unique numbers.
 Skip or take each element. Push at the end.
 
 Trap: `{}` literal doesn't bind to `vector<int>&`, use a named variable.
+
+- Elements are distinct and every leaf is a different take/skip path, so every leaf is a unique subset
+- Duplicates in the input break that (`[1,1]`). Then sort and skip, see Subsets II
+- Time is $O(n \cdot 2^n)$, each of the $2^n$ leaves copies `curr`
+
+### Mistakes
+- Used `unordered_set<vector<int>>`. No hash for vector, won't compile, and not needed
+- Return type was `vector<vector<string>>` by mistake
 
 ### Code
 ```cpp

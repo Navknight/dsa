@@ -7,12 +7,12 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: yellow
+review: 2026-11-11
 insight: "trie, on '.' DFS into every child"
 time: "O(26^L) search"
 space: "O(total chars)"
-date: 
+date: 2026-11-08
 ---
 
 # Problem
@@ -77,3 +77,11 @@ public:
 ### Complexity
 - Time: $O(L)$ add, $O(26^L)$ worst case search
 - Space: $O(\text{total chars})$
+
+- Trie, `.` tries every existing child and returns true if any works
+- `substr` per step copies the rest of the pattern, O(L^2). Pass an index into the same string
+- Children as indices into a node vector works, 0 means no child since the root is never a child
+- Cleaner: `Node* next[26] = {}` and `dfs(w, pos, node)`
+
+### Mistakes
+- End of the pattern returned false. It must return `ptr->done`. `search("ap")` is false after `addWord("apple")`
