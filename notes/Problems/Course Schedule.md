@@ -8,8 +8,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: green
+review: 2026-11-16
 insight: "cycle in the prereq graph = can't finish. 3-color DFS or Kahn's count < n"
 time: "O(V + E)"
 space: "O(V + E)"
@@ -23,9 +23,10 @@ Can all courses be finished given prerequisite pairs?
 ## DFS, 3-Color
 No cycle = finishable. See [[Cycle Detection]]. `0` unvisited, `1` on the current path, `2` done. Hitting a `1` is a back edge = cycle.
 
-Mistakes I made:
-- Ignored the recursive call's return value, so the cycle signal got lost.
-- No early return on `color == 2`, TLE on shared prerequisites.
+### Mistakes
+- Ignored the recursive call's return value, so the cycle signal got lost
+- No early return on `color == 2`, TLE on shared prerequisites
+- Called it an Euler path. It is cycle detection, no edge-walking involved
 
 ### Code
 ```cpp
@@ -74,7 +75,7 @@ public:
 - Space: $O(V + E)$
 
 ## Kahn's (BFS)
-Push indegree 0 nodes, pop and decrement neighbours. Cycle nodes never reach 0, so `completed < n`. See [[Kahn's Algorithm]].
+Push indegree 0 nodes, pop and decrement neighbours. Cycle nodes never reach 0, so `completed < n`. A topological sort is the ordering itself, Kahn's is one way to build it. If it covers every node there is no cycle. See [[Kahn's Algorithm]].
 
 ### Code
 ```cpp
