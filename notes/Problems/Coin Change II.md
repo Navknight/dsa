@@ -4,10 +4,10 @@ difficulty: Medium
 topics:
   - "[[Dynamic Programming]]"
 source: Leetcode
-star: false
+star: true
 blind75: false
-mastery:
-review:
+mastery: red
+review: 2026-11-11
 insight: "coins in the outer loop, amounts ascending inside. counts combinations, not permutations"
 time: "O(n * amount)"
 space: "O(amount)"
@@ -75,7 +75,18 @@ public:
 - Space: $O(n \cdot amount)$
 
 ## Tabulation 2D
-`dp[i][c]` = ways to make `c` with the first `i` coins. Take = same row `dp[i][c - coin]`.
+`dp[i][c]` = ways to make `c` with the first `i` coins. Take = same row `dp[i][c - coin]`. Skip = `dp[i-1][c]`. The two counts add.
+
+- Amount 0 has one way in every row. Set `dp[0][0] = 1` only and the skip term fills the column, or set the whole column and start `c` at 1. Setting the column and also looping from `c = 0` adds the skip term on top, `dp[1][0]` becomes 2
+- Coins outside, amounts inside. Swapping the loops counts permutations, `amount = 3, [1,2]` gives 3 not 2
+
+### Mistakes
+- Thought it was yes/no and used a boolean array. It counts combinations, `[1,2,5]` with 5 is 4
+- The transition had `+ 1` and never read the row above. Counts add, there is no `+ 1`
+- `n` rows with `return dp[n][amount]`, needs `n + 1`
+- Inner loop `j < amount` never fills the answer cell
+- Left out the skip term `dp[i-1][c]`
+- Base case applied twice: `dp[i][0] = 1` for every row, then the loop added the skip term on top, returned 10
 
 ### Code
 ```cpp

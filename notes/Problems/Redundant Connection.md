@@ -7,8 +7,8 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: yellow
+review: 2026-11-13
 insight: "union edges in order, the first one whose ends are already connected is the answer"
 time: "O(n * α(n))"
 space: "O(n)"
@@ -21,6 +21,13 @@ A tree plus one extra edge. Return the edge to remove.
 # Approach
 ## DSU
 First edge whose ends already share a root closes the cycle. Nodes are 1-indexed, size `n + 1`.
+
+- "Return the last one" means the last edge of the cycle in the input, not the last edge overall. Going in input order, the edge that closes the cycle is that one
+- `n` nodes, `n` edges, so exactly one union fails. Returning at once and overwriting `edge` on every failure give the same answer
+- Path compression alone is enough here, union by size is optional
+
+### Mistakes
+- Sized `parent` as `n`, nodes go up to `n`, so node `n` read out of bounds. Needs `n + 1`
 
 ### Code
 ```cpp

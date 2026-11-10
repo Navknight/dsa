@@ -7,11 +7,11 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: yellow
+review: 2026-11-13
 insight: "min heap of list heads, or merge pairwise. merging one by one is O(kN)"
-time: "O(k * N)"
-space: "O(1)"
+time: "O(N log k)"
+space: "O(k)"
 date: 
 ---
 
@@ -62,3 +62,65 @@ ListNode* mergeKLists(vector<ListNode*>& lists) {
 ### Complexity
 - Time: $O(k \cdot N)$
 - Space: $O(1)$
+
+## Pairwise Queue
+Push every list into a queue, pop two, merge, push the result back. Each pass halves the number of lists, so about `log k` rounds and every node is touched once per round.
+
+- Merging into one running result is `O(k * N)`, the result gets longer each time
+- Min heap of the `k` heads is the same `O(N log k)` with `O(k)` space. In-place version: `lists[i] = merge(lists[i], lists[i + step])` with `step` doubling, no queue
+- `new ListNode()` in `merge` leaks one node per call, use a stack dummy
+
+### Mistakes
+- `temp->next = node1->val` assigned an int to a node pointer, link the node itself
+- No check for an empty `lists`, `q.front()` on an empty queue is UB
+
+### Code
+```cpp
+class Solution {
+   public:
+    ListNode* merge(ListNode* node1, ListNode* node2) {
+        ListNode* ans = new ListNode();
+        ListNode* temp = ans;
+
+        while (node1 && node2) {
+            if (node1->val < node2->val) {
+                temp->next = node1;
+                node1 = node1->next;
+            } else {
+                temp->next = node2;
+                node2 = node2->next;
+            }
+            temp = temp->next;
+        }
+
+        if (node1)
+            temp->next = node1;
+        else
+            temp->next = node2;
+
+        return ans->next;
+    }
+
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        int n = lists.size();
+        if (n == 0) return nullptr;
+        queue<ListNode*> q;
+        for (auto& l : lists) q.push(l);
+
+        while (q.size() > 1) {
+            ListNode* l1 = q.front();
+            q.pop();
+            ListNode* l2 = q.front();
+            q.pop();
+
+            q.push(merge(l1, l2));
+        }
+
+        return q.front();
+    }
+};
+```
+
+### Complexity
+- Time: $O(N \log k)$
+- Space: $O(k)$
