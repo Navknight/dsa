@@ -11,13 +11,14 @@
             "id": "774a6eeea0029c08",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "notes/Problems.base",
-                "viewName": "All"
+                "file": "notes/Problems/Merge Two Sorted Lists.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Problems"
+              "icon": "lucide-file",
+              "title": "Merge Two Sorted Lists"
             }
           }
         ]
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/My Sheet.md",
+                "file": "notes/Problems/Merge Two Sorted Lists.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for My Sheet"
+              "title": "Backlinks"
             }
           },
           {
@@ -117,12 +118,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/My Sheet.md",
+                "file": "notes/Problems/Merge Two Sorted Lists.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from My Sheet"
+              "title": "Outgoing links"
             }
           },
           {
@@ -150,8 +151,8 @@
                 "showSearch": false,
                 "searchQuery": ""
               },
-              "icon": "lucide-ghost",
-              "title": "all-properties"
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           },
           {
@@ -160,17 +161,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/My Sheet.md",
+                "file": "notes/Problems/Merge Two Sorted Lists.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of My Sheet"
+              "title": "Outline"
             }
           },
           {
-            "id": "ec891d4e6df5ed58",
+            "id": "fa51e03cacb4eb18",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -184,8 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,41 +201,41 @@
   },
   "active": "774a6eeea0029c08",
   "lastOpenFiles": [
+    "notes/Problems/Single Number.md",
+    "notes/Problems/Permutation In String.md",
+    "notes/Problems/Largest Rectangle in Histogram.md",
+    "notes/Problems/Swim in Rising Water.md",
+    "notes/Problems/Set Matrix Zeroes.md",
+    "notes/Problems/Meeting Rooms.md",
+    "notes/Problems/Time Based Key-Value Store.md",
+    "notes/Problems/Koko Eating Bananas.md",
+    "notes/Problems/Merge Triplets to Form Target Triplet.md",
+    "notes/Problems/Rotate Image.md",
+    "notes/Problems/Valid Parenthesis String.md",
+    "notes/Problems/Permutations.md.tmp.573116.87767a3a59c1",
+    "notes/Problems/Unique Paths.md.tmp.573116.626d62a39493",
+    "notes/Problems/Rotate Image.md.tmp.573116.5d7a7dc72637",
+    "notes/Problems/Subsets.md.tmp.573116.3e4bbfcbf87a",
+    "notes/Problems/Unique Paths.md.tmp.573116.9d39d6d41eb2",
+    "notes/Problems/Search in rotated sorted array.md.tmp.573116.964ea968af17",
+    "notes/Problems/Rotate Image.md.tmp.573116.db128d37011b",
+    "notes/Problems/Subsets.md.tmp.573116.eaa280e90ebf",
+    "notes/Problems/Maximum Subarray.md.tmp.573116.7c32d1f41ca0",
+    "notes/Problems/Maximum Subarray.md.tmp.573116.2a9dcd62015f",
+    "notes/Problems/Binary Tree Level Order Traversal.md",
+    "notes/Problems/Binary Search.md",
+    "notes/Problems/Implement Trie (Prefix Tree).md",
+    "notes/Reference/set vs unordered_set.md",
+    "notes/Problems/Plus One.md",
+    "notes/Problems/Regular Expression Matching.md",
     "notes/Reference/Dynamic Programming.md",
     "notes/Reference/Eulerian Path.md",
     "notes/Reference/Arrays.md",
     "notes/Reference/Untitled.md",
     "notes/Reference/Bellman Ford.md",
     "notes/Reference/Backtracking.md",
-    "notes/Problems.base",
     "notes/Problems/Little Girl and Maximum Sum.md",
-    "notes/Problems/Little Girl and Maximum Sum.md.tmp.29054.b3707210fa4e",
-    "CodeForces/C_Little_Girl_and_Maximum_Sum.bin",
-    "CodeForces/C_Little_Girl_and_Maximum_Sum.cpp.tmp.29054.a60e6427fdec",
     "notes/Problems/Boredom.md",
-    "CodeForces/C_Little_Girl_and_Maximum_Sum.cpp",
-    "README.md",
-    "notes/Problems/Young Physicist.md",
-    "notes/Problems/String Task.md",
-    "notes/Problems/Way Too Long Words.md",
-    "notes/Templates/CF Problem.md",
-    "notes/Reference/Number Theory.md",
-    "notes/Reference/Brute Force.md",
-    "notes/Reference/Implementation.md",
-    "notes/Reference/Constructive.md",
-    "sedAf5spJ",
-    "notes/Templates/Topic.md",
-    "notes/Reference/Graphs.md",
-    "notes/Reference/Deque.md",
-    "notes/Reference/Recursion.md",
-    "notes/Reference/Math.md",
-    "notes/Reference/Bit Manipulation.md",
-    "notes/Reference/Strings.md",
-    "notes/Reference/Sorting.md",
-    "notes/Reference/Greedy.md",
-    "notes/Problems/sedWphNll",
-    "notes/Templates",
-    "notes/CP-Roadmap.pdf",
-    "Untitled.base"
+    "README.md"
   ]
 }

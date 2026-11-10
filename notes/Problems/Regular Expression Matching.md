@@ -8,8 +8,8 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: red
+review: 2026-11-06
 insight: "if p[j+1] == '*': skip the pair (j+2) or eat one char if it matches (i+1). memo on (i, j)"
 time: "O(mn)"
 space: "O(mn)"
@@ -26,6 +26,14 @@ Look ahead for `*`. Match: eat one and stay (`i+1, j`) or skip the pair (`i, j+2
 Trap: skipping keeps `i` fixed even on a match, the char may belong to what follows.
 
 Branch order changes TLE without memo, that's luck, memoize.
+
+Mistakes I made (re-solve 2026-11-05):
+- Treated `*` as its own token and walked `j-1` / `j+1`. `*` belongs to `p[j-1]`, look ahead at `p[j+1]` instead.
+- Took the plain match before checking for `x*`, so the skip-the-pair branch never ran (`s="a"`, `p="a*a"`).
+- Compared `i >= n` in the base case, should be `i >= m`.
+- Returned false when `i >= m` and `j < n`. The rest of `p` can still be `x*` pairs.
+- `i < m && s[i]==p[j] || p[j]=='.'` lets `.` match past the end of `s`. `&&` binds tighter, so it needs `i < m && (s[i]==p[j] || p[j]=='.')`. Gave infinite recursion on `s="a"`, `p=".*"`.
+- Passed strings by value and no memo. Use `string &` and `memo[i][j]`.
 
 ### Code
 ```cpp
@@ -118,3 +126,46 @@ bool isMatch(string s, string p) {
 ### Complexity
 - Time: $O(mn)$
 - Space: $O(mn)$
+
+## Two rows
+Row `i` reads only row `i+1` and itself, so keep `dp` (row `i+1`) and `next` (row `i`). Fill `j` downward so `next[j+2]` is ready.
+
+- `next` is fresh and zeroed each row, so stale values can't leak. Reusing a row means `next[n] = false` and an explicit `false` on a non-match.
+- Answer is `dp[0]` after the last `dp = next`.
+
+### Code
+```cpp
+bool isMatch(string s, string p) {
+    int m = s.size(), n = p.size();
+    vector<bool> dp(n + 1, 0);
+
+    dp[n] = true;
+    for (int j = n - 1; j >= 0; j--) {
+        if (j < n - 1 && p[j + 1] == '*') {
+            dp[j] = dp[j + 2];
+        }
+    }
+
+    for (int i = m - 1; i >= 0; i--) {
+        vector<bool> next(n + 1, 0);
+        for (int j = n - 1; j >= 0; j--) {
+            if (j < n - 1 && p[j + 1] == '*') {
+                if (s[i] == p[j] || p[j] == '.') {
+                    next[j] = dp[j];
+                }
+                next[j] = next[j] || next[j + 2];
+            } else if (s[i] == p[j] || p[j] == '.') {
+                next[j] = dp[j + 1];
+            }
+        }
+
+        dp = next;
+    }
+
+    return dp[0];
+}
+```
+
+### Complexity
+- Time: $O(mn)$
+- Space: $O(n)$

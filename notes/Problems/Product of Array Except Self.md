@@ -7,8 +7,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: yellow
+review: 2026-11-10
 insight: "prefix products left to right into ans, then multiply by a running suffix right to left"
 time: "O(n)"
 space: "O(1)"
@@ -48,6 +48,12 @@ vector<int> productExceptSelf(vector<int>& nums) {
 
 ## In Place
 Prefix pass into `ans`, then a running suffix product from the right.
+
+Mistakes I made (re-solve 2026-11-07):
+- Overwrote `nums` while building the prefix, then needed the original values in the second pass. Write into a separate `ans`.
+- The running product `mul` was never updated, so it stayed `nums[0]`.
+- The prefix must exclude `i`. Store `prefix` into `ans[i]` first, then multiply it by `nums[i]`.
+- Second pass did `ans[i] *= nums[i+1]`, which is only the next element. The suffix is a running product, `suffix *= nums[i]` after using it.
 
 ### Code
 ```cpp

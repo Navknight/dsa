@@ -7,14 +7,13 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: green
+review: 2026-11-14
 insight: "node = children[26] + end flag. search checks end, startsWith doesn't"
 time: "O(L)"
 space: "O(N * 26)"
 date: 2026-07-01
 ---
-
 # Problem
 Trie with `insert`, `search` and `startsWith`.
 
@@ -67,6 +66,11 @@ public:
 
 ## Array Children
 `children[26] = {}` zero-inits to nullptr. Faster for lowercase only.
+
+- `search` and `startsWith` are the same walk. `search` also checks the end flag (insert `apple`, search `app` is false, startsWith `app` is true).
+- Give the flag an initializer (`bool end = false`), don't rely on `new Node()` zero-filling it.
+- Pass strings as `const string&`. A helper that returns the node for a string (or `nullptr`) makes `search` = `node && node->end` and `startsWith` = `node != nullptr`.
+- Re-solved 2026-11-07 from the problem statement, clean first pass.
 
 ### Code
 ```cpp

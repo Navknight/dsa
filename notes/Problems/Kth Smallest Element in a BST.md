@@ -7,8 +7,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: green
+review: 2026-11-18
 insight: "inorder of a BST is sorted, stop at the kth visited node"
 time: "O(h + k)"
 space: "O(h)"
@@ -21,6 +21,9 @@ date: 2026-06-29
 # Approach
 ## Recursive Inorder
 Decrement `k` (by ref) on each visit, return the node when it hits 0. -1 = not found yet.
+
+### Mistakes
+- First idea was a "height list" per node. For the follow-up it is subtree size, not height
 
 ### Code
 ```cpp

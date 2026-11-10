@@ -8,8 +8,8 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: yellow
+review: 2026-11-10
 insight: "BFS levels: when i hits currentEnd, jump and set currentEnd = farthest"
 time: "O(n)"
 space: "O(1)"
@@ -70,6 +70,13 @@ int jump(vector<int>& nums) {
 
 ## Greedy
 Track `farthest`. When `i == currentEnd` a jump is forced: `jumps++`, `currentEnd = farthest`.
+
+Mistakes I made (re-solve 2026-11-07):
+- Counted a jump every time `farthest` improved. Indices in the same level share one jump, so only charge at the level boundary `i == currentEnd`. Failed on `[1,2,3,4,5]` (answer 3).
+- Started `end = nums[0]` with `ans = 0`, which skips the first jump. Start `end = 0` so the jump out of index 0 is charged at `i = 0`.
+- Patched the last jump with `|| i == n-1`. It works only because it cancels the missing first jump. Loop to `n - 2` instead, no jump is taken from the last index.
+- Update `farthest` before the `i == end` check.
+- The `n == 1` and `n == 2` special cases are not needed.
 
 ### Code
 ```cpp
