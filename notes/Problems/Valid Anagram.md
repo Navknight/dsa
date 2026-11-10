@@ -8,12 +8,12 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: green
+review: 2026-11-17
 insight: "equal lengths and equal 26-count arrays"
 time: "O(n)"
 space: "O(1)"
-date: 
+date: 2026-11-10
 ---
 
 # Problem
@@ -45,7 +45,10 @@ bool isAnagram(string s, string t) {
 ```
 
 ## Count Array
-Lowercase only, so a 26 array is faster.
+Lowercase only, so a 26 array is faster. One array: `+` for `s`, `-` for `t`, everything must end at 0. Check the lengths first.
+
+- Unicode follow-up: back to a hash map
+- Can drop the second loop: with equal lengths, a count going negative already means a mismatch
 
 ### Code
 ```cpp

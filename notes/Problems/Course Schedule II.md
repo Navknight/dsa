@@ -8,8 +8,8 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: yellow
+review: 2026-11-13
 insight: "Kahn's, the pop order is the answer. order.size() < n = cycle"
 time: "O(V + E)"
 space: "O(V + E)"
@@ -73,6 +73,10 @@ public:
 - Space: $O(V^2)$
 
 ## Adjacency List
+Edge is `prereq -> course`: `graph[pre[1]].push_back(pre[0])`, `indegree[pre[0]]++`. Reversing it gives the reverse order. Nodes on a cycle never reach indegree 0, so a shorter order means a cycle.
+
+### Mistakes
+- First version returned `order` without the cycle check. `n = 3, [[1,0],[2,1],[1,2]]` gave `[0]`, should be `[]`. It only passed when every node was on the cycle
 
 ### Code
 ```cpp

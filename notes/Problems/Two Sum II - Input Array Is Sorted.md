@@ -8,8 +8,8 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: red
+review: 2026-11-11
 insight: "two pointers from both ends, move left if sum is small, right if big"
 time: "O(n)"
 space: "O(1)"
@@ -21,7 +21,13 @@ Two Sum on a sorted array, O(1) space.
 
 # Approach
 ## Binary Search
-Fix `l`, binary search `target - numbers[l]` on the right.
+Fix `l`, binary search `target - numbers[l]` on the right. Search only `i + 1..n - 1`, then `m > i` always and the answer is `{i + 1, m + 1}`.
+
+### Mistakes
+- Compared `numbers[m]` to `target`, not to `req = target - numbers[i]`
+- `if (m == i) continue;` inside the loop never moves `l` or `r`, infinite loop (TLE). Start `l` at `i + 1` instead
+- `while (l < r)` skips the last candidate, needs `l <= r`
+- Went for binary search per element, two pointers was the intended pattern
 
 ### Code
 ```cpp
@@ -53,6 +59,9 @@ vector<int> twoSum(vector<int>& numbers, int target) {
 
 ## Two Pointers
 Start at both ends. Sum too small, move left. Too big, move right.
+
+- Moving `r` is safe when the sum is too big: `numbers[r]` can't pair with `l` or anything right of it, all at least as large
+- Loop on `l < r`. Don't compute the sum three times. A `!= target` loop condition makes an inner `else` return dead code
 
 ### Code
 ```cpp

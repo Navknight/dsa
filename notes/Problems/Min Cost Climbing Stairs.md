@@ -6,8 +6,8 @@ topics:
 source: Leetcode
 star: false
 blind75: false
-mastery:
-review:
+mastery: yellow
+review: 2026-11-13
 insight: "dp[i] = cost[i] + min(dp[i+1], dp[i+2]), answer min(dp[0], dp[1])"
 time: "O(n)"
 space: "O(1)"
@@ -42,6 +42,7 @@ public:
 - Space: $O(n)$
 
 ## Two Variables
+Walk backwards. `next2` = cost from the top (0), `next` = `cost[n-1]`. Each step `cur = min(next, next2) + cost[i]`. Answer `min(next, next2)` after the loop, they hold step 0 and step 1.
 
 ### Code
 ```cpp

@@ -7,8 +7,8 @@ topics:
 source: Leetcode
 star: true
 blind75: true
-mastery:
-review:
+mastery: yellow
+review: 2026-11-13
 insight: "match: 1 + dp[i-1][j-1], else max(dp[i-1][j], dp[i][j-1])"
 time: "O(m * n)"
 space: "O(m * n)"
@@ -22,10 +22,10 @@ Length of the LCS of two strings.
 State `(i, j)`. Match: always take it. Else skip one char from either string, take the max.
 
 ## Memoization
-Mistakes I made:
-- Threaded a running length through the recursion, the cache stored path-dependent values.
-- `unordered_map<pair<int,int>>` has no hash, used `map`.
-- Sentinel 0 collides with real answers, use -1.
+### Mistakes
+- Threaded a running length through the recursion, the cache stored path-dependent values
+- `unordered_map<pair<int,int>>` has no hash, used `map`
+- Sentinel 0 collides with real answers, use -1
 
 ### Code
 ```cpp
@@ -58,7 +58,9 @@ public:
 ## Tabulation
 `dp[i][j]` = LCS of the first `i` and `j` chars. Compare `text1[i-1]`, `text2[j-1]`.
 
-Mistake I made: compared `text1[i]`, reads `'\0'` at the end and fakes a match.
+### Mistakes
+- Compared `text1[i]`, reads `'\0'` at the end and fakes a match
+- Framed it as start a new subsequence or continue the previous one. That is Kadane (contiguous). A subsequence has no such choice: a match is always taken, a mismatch skips one char from either string
 
 ### Code
 ```cpp
@@ -86,3 +88,34 @@ public:
 ### Complexity
 - Time: $O(mn)$
 - Space: $O(mn)$
+
+## Suffix Form
+`dp[i][j]` = LCS of `text1[i..]` and `text2[j..]`, filled from the end, answer `dp[0][0]`.
+
+- Match: `1 + dp[i+1][j+1]`. Mismatch: `max(dp[i+1][j], dp[i][j+1])`
+- One line: `max({dp[i+1][j+1] + (a == b), dp[i][j+1], dp[i+1][j]})`. The extra terms never win on the wrong case, so the max over three is safe
+- Each row reads only the row below, two rows are enough: `O(min(m, n))` space. Swap the strings so the rows are the short one. After the last `swap(prev, curr)` the answer is `prev[0]`
+
+### Code
+```cpp
+class Solution {
+   public:
+    int longestCommonSubsequence(string text1, string text2) {
+        int m = text1.size(), n = text2.size();
+        vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
+
+        for (int i = m - 1; i >= 0; i--) {
+            for (int j = n - 1; j >= 0; j--) {
+                dp[i][j] =
+                    max({dp[i + 1][j + 1] + (text1[i] == text2[j]), dp[i][j + 1], dp[i + 1][j]});
+            }
+        }
+
+        return dp[0][0];
+    }
+};
+```
+
+### Complexity
+- Time: $O(mn)$
+- Space: $O(mn)$, or $O(\min(m, n))$ with two rows
